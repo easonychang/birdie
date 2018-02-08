@@ -14,10 +14,13 @@
 	<!-- Font Awesome -->
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
+	
 	<!-- CSS -->
-	<link href="../public/css/index.css" rel="stylesheet">
+	<link href="/css/index.css" rel="stylesheet">
+
 	
-	
+	<!-- JS -->
+	<script src='/js/bootstrap.min.js'></script>
 	
 	
 
@@ -32,17 +35,17 @@
 
 <body>
 
-<nav class="navbar navbar-inverse fixed-top bg-primary navbar-static-top">
+<nav class="navbar navbar-inverse bg-primary navbar-fixed-left">
     <div class = "container-fluid">
 		
 		
 		<div class = "navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <h1 class="navbar-brand visible-sm visible-xs">birdie</h1>
+            <h1 class="navbar-brand visible-xs">birdie</h1>
         </div>
 
     <div class="collapse navbar-collapse" id="myNavbar">
@@ -63,7 +66,7 @@
 	
 	
 <nav class="navbar navbar-inverse navbar-fixed-bottom nav2">
-	<div class="container">
+	<div class="container-fluid">
     
 		<ul class="nav navbar-nav">
 			
@@ -76,27 +79,23 @@
 		
 	<div class="container">
 		
-	
+		<br>
+		
 		<i class="fas fa-user-circle fa-3x" aria-hidden='true'></i>
 		
 		<h2> Hello, Eason</h2>
 		<h4> What are you craving today?</h4>
 		<button type="button" class="btn btn-default"> I don't know, you choose!</button>
 		
-		  {{#each projects}}
-      		<div class="project" id="{{id}}">
-        		<a href="project/{{name}}" class="thumbnail">
-          			<img src="images/{{image}}" ... />
-          			<p>{{name}}</p>
-        		</a>
-      		</div>
-    		{{/each}}
+		
+		
+
+		
 	
 	</div>
 		
 
 
 	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="../public/js/bootstrap.min.js"></script>
 </body>
 </html>
