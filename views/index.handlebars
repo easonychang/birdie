@@ -1,8 +1,102 @@
 <html>
 <head>
-	<title>Test Page</title>
+	<title>birdie</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	 <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+	
+	<!-- Bootstrap -->
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	<!-- Font Awesome -->
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+	<!-- CSS -->
+	<link href="../public/css/index.css" rel="stylesheet">
+	
+	
+	
+	
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
 </head>
+
+
 <body>
-Begin here (or replace this with any static code already written).
+
+<nav class="navbar navbar-inverse fixed-top bg-primary navbar-static-top">
+    <div class = "container-fluid">
+		
+		
+		<div class = "navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h1 class="navbar-brand visible-sm visible-xs">birdie</h1>
+        </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+            <li class = "nav-item active">
+                <a href=""><i class='fa fa-home' aria-hidden='true'></i></a>
+            </li>
+            <li> <a href=""> Home </a></li>
+            <li> <a href=""> Calendar </a></li>	
+			<li> <a href=""> Profile </a> </li>
+			<li> <a href=""> Friends </a></li>
+            
+        </ul>
+    </div>
+
+    </div>
+</nav>
+	
+	
+<nav class="navbar navbar-inverse navbar-fixed-bottom nav2">
+	<div class="container">
+    
+		<ul class="nav navbar-nav">
+			
+			<li><a href="#"><i class="fas fa-user-circle fa-2x" aria-hidden='true'></i></a></li>
+			<li><a href="#"><i class='fa fa-home fa-2x' aria-hidden='true'></i></a></li>
+			<li><a href="#"><i class="far fa-calendar-alt fa-2x"></i></a></li>
+    	</ul>
+	</div>
+</nav>
+		
+	<div class="container">
+		
+	
+		<i class="fas fa-user-circle fa-3x" aria-hidden='true'></i>
+		
+		<h2> Hello, Eason</h2>
+		<h4> What are you craving today?</h4>
+		<button type="button" class="btn btn-default"> I don't know, you choose!</button>
+		
+		  {{#each projects}}
+      		<div class="project" id="{{id}}">
+        		<a href="project/{{name}}" class="thumbnail">
+          			<img src="images/{{image}}" ... />
+          			<p>{{name}}</p>
+        		</a>
+      		</div>
+    		{{/each}}
+	
+	</div>
+		
+
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="../public/js/bootstrap.min.js"></script>
 </body>
 </html>
