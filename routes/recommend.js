@@ -3,7 +3,7 @@
  * GET home page.
  */
 
-exports.recommendView = function(req, res){
+exports.recommendedView = function(req, res){
 
-  res.render('recommend');
+  res.render('recommended');
 };
