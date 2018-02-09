@@ -36,7 +36,7 @@ p, h1 {
 .navbar-brand {
     text-align: center;
     float: none !important;
-    margin: 0;
+    margin-right: 35px;
 }
 
 .navbar-brand:hover {
@@ -75,6 +75,15 @@ p, h1 {
 
 .far:hover {
     color: #A7DBD8;
+}
+
+.welcome{
+	margin: 30px;
+}
+
+
+.rest-card{
+	margin-top: 30px;
 }
 
 
