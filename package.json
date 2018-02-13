@@ -1,14 +1,12 @@
 {
-  "name": "IntroHCI",
+  "name": "birdie",
   "version": "0.0.1",
-  "author": "Intro HCI Staff",
-
+  "author": "Eason Chang",
   "repository": {
     "type": "git",
-    "url": "https://github.com/IntroHCI/lab4"
+    "url": ""
   },
   "license": "MIT",
-
   "private": true,
   "scripts": {
     "start": "node app.js"
@@ -20,6 +18,7 @@
     "mongoose": "*"
   },
   "engines": {
-    "node": "0.10.x"
-  }  
+    "node": "8.1.4",
+    "npm": "5.6.0"
+  }
 }
