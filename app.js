@@ -12,6 +12,7 @@ var index = require('./routes/index');
 // Example route
 // var user = require('./routes/user');
 var recommended = require('./routes/recommend');
+var signup = require('./routes/signup');
 
 var app = express();
 
@@ -38,6 +39,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 // Example route
 // app.get('/users', user.list);
+app.get('/signup', signup.signupView);
 app.get('/recommended', recommended.recommendedView);
 
 http.createServer(app).listen(app.get('port'), function(){
