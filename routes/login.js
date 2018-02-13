@@ -7,5 +7,5 @@ exports.loginView = function(req, res){
 };
 
 exports.loginPost = function(req,res){
-	return res.redirect('/homepage');
+	return res.redirect('/home');
 };

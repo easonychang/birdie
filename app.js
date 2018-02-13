@@ -10,7 +10,7 @@ var handlebars = require('express3-handlebars')
 
 
 // our routes
-var homepage = require('./routes/homepage');
+var home = require('./routes/home');
 var recommended = require('./routes/recommend');
 var login = require('./routes/login');
 
@@ -45,7 +45,7 @@ app.get('/', login.loginView);
 app.post('/login', login.loginPost);
 
 app.get('/recommended', recommended.recommendedView);
-app.get('/homepage', homepage.view);
+app.get('/home', home.view);
 
 
 http.createServer(app).listen(app.get('port'), function(){
