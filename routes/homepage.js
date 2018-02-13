@@ -4,5 +4,5 @@
  */
 
 exports.view = function(req, res){
-  res.render('index');
+  res.render('homepage');
 };
