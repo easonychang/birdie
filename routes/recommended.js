@@ -10,13 +10,6 @@ var data = require('../data.json');
 
 exports.recommendedView = function(req, res){
 
-  
-
-    
-
-    
-    
-
     const searchRequest = {
       term:'Four Barrel Coffee',
       location: 'san francisco, ca'

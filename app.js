@@ -11,7 +11,7 @@ var handlebars = require('express3-handlebars')
 
 // our routes
 var home = require('./routes/home');
-var recommended = require('./routes/recommend');
+var recommended = require('./routes/recommended');
 var login = require('./routes/login');
 var friends = require('./routes/friends');
 
