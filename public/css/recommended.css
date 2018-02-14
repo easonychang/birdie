@@ -81,9 +81,17 @@ p, h1 {
 
 
 
+.fa-times-circle{
+	color: red;
+}
 
+.fa-check-circle{
+	color: green;
+}
 
-
+.yelplogo{
+	width:100px;
+}
 
 
 /* Huge Monitor*/

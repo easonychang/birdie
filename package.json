@@ -15,7 +15,8 @@
     "express": "3.x",
     "express3-handlebars": "*",
     "mongodb": "*",
-    "mongoose": "*"
+    "mongoose": "*",
+    "yelp-fusion": "^2.0.3"
   },
   "engines": {
     "node": "8.1.4",
