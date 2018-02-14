@@ -13,6 +13,7 @@ var handlebars = require('express3-handlebars')
 var home = require('./routes/home');
 var recommended = require('./routes/recommend');
 var login = require('./routes/login');
+var friends = require('./routes/friends');
 
 
 var app = express();
@@ -38,14 +39,12 @@ if ('development' == app.get('env')) {
 }
 
 
-
-
 // added routes
 app.get('/', login.loginView);
 app.post('/login', login.loginPost);
-
 app.get('/recommended', recommended.recommendedView);
 app.get('/home', home.view);
+app.get('/friends', friends.friendsView);
 
 
 http.createServer(app).listen(app.get('port'), function(){
