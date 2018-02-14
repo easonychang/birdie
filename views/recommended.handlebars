@@ -80,24 +80,23 @@
 	<div class="container-fluid">
 		
 		<div class="col-5 card text-center">
-            <img class="card-img-top" src="/images/phuongtrang.jpg" alt="Restaurant">
+            <img class="card-img-top" src="{{image_url}}" alt="Restaurant">
             <div class="card-body">
-                <h4 class="card-title text-center">Phuong Trang</h4>
+                <h4 class="card-title text-center">{{name}}</h4>
                 <p class="card-text text-center">
-                    Vietnamese<br>
+                    {{categories}} <br>
                 </p>
                 <div class="text-center">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-					<p>(3845) Reviews</p>
-					<p>2.3 mi</p>
+                    <img src="{{rating_img}}">
+					<p>{{review_count}} Reviews </p> 
+					<img class = "yelplogo" src="/images/YelpLogo_Trademark/Screen/Yelp_trademark_RGB.png">
+					
+					<!--<p>distance meter</p>-->
+					
                 </div>
 				
 				
-				<div class ="yesno text-center">
+				<div class ="text-center">
                 
 					<i class="fas fa-times-circle fa-3x"></i>
 					<i class="fas fa-check-circle fa-3x"></i>
