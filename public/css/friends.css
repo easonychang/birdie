@@ -116,6 +116,11 @@ p, h1 {
     color: #000;
 }
 
+.btn-secondary {
+    width: 100%;
+    text-align: center;
+}
+
 /* Huge Monitor*/
 
 @media (min-width: 1524px) {

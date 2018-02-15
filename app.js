@@ -15,6 +15,8 @@ var recommended = require('./routes/recommended');
 var login = require('./routes/login');
 var friends = require('./routes/friends');
 var confirm = require('./routes/confirm');
+var sync = require('./routes/sync');
+var scheduled = require('./routes/scheduled');
 
 
 var app = express();
@@ -47,6 +49,8 @@ app.get('/recommended', recommended.recommendedView);
 app.get('/home', home.view);
 app.get('/friends', friends.friendsView);
 app.get('/confirm', confirm.confirmView);
+app.get('/sync', sync.syncView);
+app.get('/scheduled', scheduled.scheduledView);
 
 
 http.createServer(app).listen(app.get('port'), function(){
