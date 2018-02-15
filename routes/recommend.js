@@ -9,32 +9,24 @@ const apiKey = 'WiNraPNc4ZKOeIZGbwBDUVOMUXnfGNxYo_-MlkjtZ7-C4nAVuDPvD8bxJdQ90xG2
 var data = require('../data.json');
 
 exports.recommendedView = function(req, res){
-
   
-
-    
-
     
     
 
     const searchRequest = {
-      term:'Four Barrel Coffee',
-      location: 'san francisco, ca'
+      term:'vietnamese',
+      location: 'san diego, ca'
     };
 
     const client = yelp.client(apiKey);
 
-    /*client.search(searchRequest).then(response => {
+    client.search(searchRequest).then(response => {
       const firstResult = response.jsonBody.businesses[0];
       const prettyJson = JSON.stringify(firstResult, null, 4);
-      console.log(prettyJson);
-    }).catch(e => {
-      console.log(e);
-    });*/
+      var businessID = firstResult.id;
+      //console.log(firstResult.id);
 
-    //var findRest = ;
-
-    client.business('phuong-trang-san-diego').then(response => {
+      client.business(businessID).then(response => {
         //console.log(response.jsonBody);
 
         var newRest = {
@@ -82,7 +74,6 @@ exports.recommendedView = function(req, res){
               break;
           case 4:
               rating_image = '/images/yelp_stars/web_and_ios/regular/regular_4.png';
-             
               break;
           case 4.5:
               rating_image = '/images/yelp_stars/web_and_ios/regular/regular_4_half.png';
@@ -114,6 +105,15 @@ exports.recommendedView = function(req, res){
     }).catch(e => {
         console.log(e);
     });
+
+
+    }).catch(e => {
+      console.log(e);
+    });
+
+  
+
+    
 
 
     //res.render('recommended');
