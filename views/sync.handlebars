@@ -8,7 +8,8 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 	
 	<!-- Bootstrap -->
-	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 	
 	<!-- Font Awesome -->
@@ -16,7 +17,7 @@
 
 	
 	<!-- CSS -->
-	<link href="/css/index.css" rel="stylesheet">
+	<link href="/css/sync.css" rel="stylesheet">
 
 	
 	<!-- JS -->
@@ -30,12 +31,15 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+    
+    <meta http-equiv="refresh" content="2;url=/scheduled" />
+    
 </head>
 
 
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-left">
+<!--<nav class="navbar navbar-inverse navbar-fixed-left">
     <div class = "container-fluid">
 		
 		
@@ -53,92 +57,37 @@
             <li class = "nav-item active">
                 <a href=""><i class='fa fa-home' aria-hidden='true'></i></a>
             </li>
-            <li> <a href=""> Home </a></li>
+            <li> <a href="/home"> Home </a></li>
             <li> <a href=""> Calendar </a></li>	
 			<li> <a href=""> Profile </a> </li>
-			<!--<li> <a href=""> Friends </a></li> -->
+			<!--<li> <a href=""> Friends </a></li>
             
         </ul>
     </div>
 
     </div>
-</nav>
+</nav>-->
 	
 	
-<nav class="navbar navbar-inverse navbar-fixed-bottom nav2">
+<nav class="navbar navbar-fixed-bottom nav2">
 	<div class="container-fluid">
     
 		<ul class="nav navbar-nav">
-			
-			<li><a href="#"><i class="fas fa-user-circle" aria-hidden='true'></i></a></li>
-			<li><a href=""><i class='fa fa-home' aria-hidden='true'></i></a></li>
-			<li><a href="#"><i class="far fa-calendar-alt"></i></a></li>
+            <li><a href="#"><i class="fas fa-user-circle" aria-hidden='true'></i></a></li>
+            <li><a href=""><i class='fas fa-home' aria-hidden='true'></i></a></li>
+            <li><a href="#"><i class="far fa-calendar-alt"></i></a></li>
     	</ul>
 	</div>
 </nav>
 		
 	<div class="container-fluid">
-		
-		
-	
-		
 
-		<div class= "welcome">
-			<i class="fas fa-user-circle fa-3x" aria-hidden='true'></i>
-			<h2> Hello, Eason</h2>
-			<h5> What are you craving today?</h5>
-			<br>
-			<div class = "text-center">
-				<a class="btn btn-secondary" href="./recommended" role="button"> I don't know, you choose!</a>
-			</div>
-		</div>
+		<div class="syncing text-center">
+            <h2>Syncing calendars...</h2>
+            <br>
+            <i class="fas fa-sync fa-spin fa-3x"></i>
+        </div>
 
-		
-  		<div class="rest-card row">
-  			<div class="col-xs-6">
-    			<div class="card">
-      				<div class="card-block">
-        				<h4 class="card-title text-center">Vietnamese</h4>
-        				      
-      				</div>
-    			</div>
-  			</div>
-  				
-			<div class="col-xs-6">
-    			<div class="card">
-      				<div class="card-block">
-        				<h4 class="card-title text-center">Mexican</h4>
-        				
-      				</div>
-    			</div>
-  			</div>
-		</div>
-		
-		<div class="rest-card row">
-  			<div class="col-xs-6">
-    			<div class="card">
-      				<div class="card-block">
-        				<h4 class="card-title text-center">Chinese</h4>
-        				      
-      				</div>
-    			</div>
-  			</div>
-  				
-			<div class="col-xs-6">
-    			<div class="card">
-      				<div class="card-block">
-        				<h4 class="card-title text-center">Korean</h4>
-        					
-      				</div>
-    			</div>
-  			</div>
-		</div>
-		
-		
-		
-
-		
-	
 	</div>
 		
 

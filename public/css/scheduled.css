@@ -4,6 +4,18 @@ html, body {
     margin: 0;
 }
 
+#user {
+    margin: auto;
+    max-width: 100%;
+    text-align: center;
+    align-content: center;
+    height: auto;
+}
+
+#padding {
+    padding-top: 10px;
+}
+
 p, h1 {
     margin: 0;
 }
@@ -15,7 +27,6 @@ p, h1 {
     border: 0px;
     box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
 }
-
 
 .navbar .navbar-nav {
     display: inline-block;
@@ -52,15 +63,6 @@ p, h1 {
   margin-left: 10px;
 }
 
-.card-img-top{
-	width:300px;
-    padding-top: 5%;
-}
-
-.choose {
-    padding-bottom: 5%
-}
-
 .nav2 .fa{
     color: #454545;
 }
@@ -73,41 +75,35 @@ p, h1 {
     color: #454545;
 }
 
-.nav2 .fa:hover {
+.fas {
+    display: inline;
+}
+
+.fa:hover {
     color: #A7DBD8;
 }
 
-.nav2 .fas:hover {
+.fas:hover {
     color: #A7DBD8;
 }
 
-.nav2 .far:hover {
+.far:hover {
     color: #A7DBD8;
 }
 
-.fa-times-circle{
-	color: red;
+.welcome{
+	margin: 30px;
 }
 
-.fa-check-circle{
-	color: green;
+
+.rest-card{
+	margin-top: 30px;
+    padding-bottom: 30px;
 }
 
-.yelplogo{
-	width:100px;
-}
-
-.cardcontainer{
-    position: relative;
-    height: 100%;
-}
-
-.card {
-    top: 3%;
-}
-
-.card-title {
-    padding-top: 5%;
+.btn-outline-secondary {
+    width: 100%;
+    text-align: center;
 }
 
 
@@ -184,5 +180,3 @@ p, h1 {
     }
 
 }
-
-

@@ -8,10 +8,16 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 
-var index = require('./routes/index');
-// Example route
-// var user = require('./routes/user');
-var recommended = require('./routes/recommend');
+
+// our routes
+var home = require('./routes/home');
+var recommended = require('./routes/recommended');
+var login = require('./routes/login');
+var friends = require('./routes/friends');
+var confirm = require('./routes/confirm');
+var sync = require('./routes/sync');
+var scheduled = require('./routes/scheduled');
+
 
 var app = express();
 
@@ -35,10 +41,17 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', index.view);
-// Example route
-// app.get('/users', user.list);
+
+// added routes
+app.get('/', login.loginView);
+app.post('/login', login.loginPost);
 app.get('/recommended', recommended.recommendedView);
+app.get('/home', home.view);
+app.get('/friends', friends.friendsView);
+app.get('/confirm', confirm.confirmView);
+app.get('/sync', sync.syncView);
+app.get('/scheduled', scheduled.scheduledView);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
