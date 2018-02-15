@@ -14,6 +14,7 @@ var home = require('./routes/home');
 var recommended = require('./routes/recommended');
 var login = require('./routes/login');
 var friends = require('./routes/friends');
+var confirm = require('./routes/confirm');
 
 
 var app = express();
@@ -45,6 +46,7 @@ app.post('/login', login.loginPost);
 app.get('/recommended', recommended.recommendedView);
 app.get('/home', home.view);
 app.get('/friends', friends.friendsView);
+app.get('/confirm', confirm.confirmView);
 
 
 http.createServer(app).listen(app.get('port'), function(){

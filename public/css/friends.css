@@ -11,49 +11,18 @@ html, body {
     height: auto;
 }
 
-#fooddiv {
-    margin: auto;
-    border-radius: 10px 10px;
-    background: #ebebeb;
-    padding-bottom: 10px; 
-    max-width: 85%;
-    height: auto;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
 #padding {
     padding-top: 10px;
 }
 
-#rightimage {
-    border-radius:10% 0% 0% 10%;
-    max-width:22%;
-    height:auto;
-}
-
-#leftimage {
-    border-radius:0% 10% 10% 0%;
-    width:auto;
-    max-width:22%;
-    height:auto;
-    
-}
-
-#foodImage {
-    width:auto;
-    max-width:22%;
-    height:auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-#foodname {
-    color: #454545;
-    text-decoration: none;
-}
-
 p, h1 {
     margin: 0;
+}
+
+.friendName {
+    color: #454545;
+    text-decoration: none;
+    display: inline;
 }
 
 .navbar {
@@ -111,6 +80,10 @@ p, h1 {
     color: #454545;
 }
 
+.fas {
+    display: inline;
+}
+
 .fa:hover {
     color: #A7DBD8;
 }
@@ -136,6 +109,11 @@ p, h1 {
 .btn-outline-secondary {
     width: 100%;
     text-align: center;
+}
+
+.list-group.active:hover {
+    background-color: #000000;
+    color: #000;
 }
 
 /* Huge Monitor*/
