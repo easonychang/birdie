@@ -11,7 +11,11 @@ p, h1 {
 .navbar {
     margin-bottom: 0 !important;
     text-align: center;
+    background-color: #fff;
+    border: 0px;
+    box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
 }
+
 
 .navbar .navbar-nav {
     display: inline-block;
@@ -50,22 +54,24 @@ p, h1 {
 
 .card-img-top{
 	width:300px;
+    padding-top: 5%;
 }
 
-
+.choose {
+    padding-bottom: 5%
+}
 
 .nav2 .fa{
-    color: white;
+    color: #454545;
 }
 
 .nav2 .far{
-    color: white;
+    color: #454545;
 }
 
 .nav2 .fas{
-    color: white;
+    color: #454545;
 }
-
 
 .nav2 .fa:hover {
     color: #A7DBD8;
@@ -79,11 +85,30 @@ p, h1 {
     color: #A7DBD8;
 }
 
+.fa-times-circle{
+	color: red;
+}
 
+.fa-check-circle{
+	color: green;
+}
 
+.yelplogo{
+	width:100px;
+}
 
+.cardcontainer{
+    position: relative;
+    height: 100%;
+}
 
+.card {
+    top: 3%;
+}
 
+.card-title {
+    padding-top: 5%;
+}
 
 
 /* Huge Monitor*/
