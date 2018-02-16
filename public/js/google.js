@@ -1,3 +1,3 @@
 function onSignIn(googleUser) {
-  window.location.replace("http://localhost:3000/home");
+  window.location.replace("https://a6-birdie.herokuapp.com/home");
 }
