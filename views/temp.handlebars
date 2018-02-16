@@ -8,7 +8,8 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 	
 	<!-- Bootstrap -->
-	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 	
 	<!-- Font Awesome -->
@@ -16,7 +17,7 @@
 
 	
 	<!-- CSS -->
-	<link href="/css/recommended.css" rel="stylesheet">
+	<link href="/css/home.css" rel="stylesheet">
 
 	
 	<!-- JS -->
@@ -53,7 +54,7 @@
             <li class = "nav-item active">
                 <a href=""><i class='fa fa-home' aria-hidden='true'></i></a>
             </li>
-            <li> <a href="./"> Home </a></li>
+            <li> <a href="/home"> Home </a></li>
             <li> <a href=""> Calendar </a></li>	
 			<li> <a href=""> Profile </a> </li>
 			<!--<li> <a href=""> Friends </a></li>
@@ -65,52 +66,28 @@
 </nav>-->
 	
 	
-<nav class="navbar navbar-inverse navbar-fixed-bottom nav2">
+<nav class="navbar navbar-fixed-bottom nav2">
 	<div class="container-fluid">
     
 		<ul class="nav navbar-nav">
-			
-			<li><a href="/temp"><i class="fas fa-user-circle" aria-hidden='true'></i></a></li>
-			<li><a href="/home"><i class='fa fa-home' aria-hidden='true'></i></a></li>
-			<li><a href="/temp"><i class="far fa-calendar-alt"></i></a></li>
+            <li><a href="#"><i class="fas fa-user-circle" aria-hidden='true'></i></a></li>
+            <li><a href="/home"><i class='fas fa-home' aria-hidden='true'></i></a></li>
+            <li><a href="#"><i class="far fa-calendar-alt"></i></a></li>
     	</ul>
 	</div>
 </nav>
 		
 	<div class="container-fluid">
-        <div class="cardcontainer">
-            <div class="col-5 card text-center" style="background-color: #ebebeb">
-                <img class="card-img-top" src="{{image_url}}" alt="Restaurant">
-                <div class="card-body">
-                    <h4 class="card-title text-center">{{name}}</h4>
-                    <p class="card-text text-center">
-                        {{categories}} <br>
-                    </p>
-                    <div class="text-center">
-                        <img src="{{rating_img}}">
-                        <p>{{review_count}} Reviews </p> 
-                        <img class = "yelplogo" src="/images/YelpLogo_Trademark/Screen/Yelp_trademark_RGB.png">
 
-                        <!--<p>distance meter</p>-->
-
-                    </div>
-                    <div class="text-center choose">
-                        <a href="/home">
-                            <i class="fas fa-times-circle fa-3x"></i>
-                        </a>
-                        <a href="/friends">
-                            <i class="fas fa-check-circle fa-3x"></i>
-                        </a>
-                    </div>
-                </div>
+		<div class= "welcome">
+			<div id="user text-center">
+				<h2>Oops!</h2>
+				<h5>This page is currently under construction.</h5>
             </div>
-        </div>
-	
-
-
-		
-	
+		</div>
 	</div>
+		
+
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 </body>

@@ -6,8 +6,7 @@ html, body {
 #user {
     margin: auto;
     max-width: 100%;
-    text-align: center;
-    align-content: center;
+    text-align: left;
     height: auto;
 }
 
@@ -17,6 +16,12 @@ html, body {
 
 p, h1 {
     margin: 0;
+}
+
+.friendName {
+    color: #454545;
+    text-decoration: none;
+    display: inline;
 }
 
 .navbar {
@@ -105,12 +110,14 @@ p, h1 {
     text-align: center;
 }
 
-.confirm .btn {
-    width: 35%;
+.list-group.active:hover {
+    background-color: #000000;
+    color: #000;
 }
 
-.modal-footer {
-    align-content: center;
+.btn-secondary {
+    width: 100%;
+    text-align: center;
 }
 
 /* Huge Monitor*/
