@@ -1,6 +1,5 @@
 html, body {
-    height: 100%;
-    padding: 0;
+    padding-bottom: 30px;
     margin: 0;
 }
 
@@ -98,6 +97,10 @@ p, h1 {
 
 .btn-secondary {
     width: 100%;
+    text-align: center;
+}
+
+.align-middle {
     text-align: center;
 }
 
