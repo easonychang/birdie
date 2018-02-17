@@ -2,6 +2,7 @@ html, body {
     padding-bottom: 30px;
 }
 
+
 #user {
     margin: auto;
     max-width: 100%;
@@ -44,6 +45,7 @@ html, body {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
 
 #foodname {
     color: #454545;
@@ -135,6 +137,9 @@ p, h1 {
     width: 100%;
     text-align: center;
 }
+
+
+
 
 /* Huge Monitor*/
 
