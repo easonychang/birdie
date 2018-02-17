@@ -14,10 +14,20 @@ function statusChangeCallback(response) {
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
         console.log('Successfully logged in with Facebook');
-         FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
+         FB.api('/me?fields=name,first_name,picture.type(square),friends', changeUser);
   }
 }
 
 function changeUser(response){
+  if(typeof(Storage) !== "undefined") {
+		localStorage.name = response.first_name;
+    localStorage.picurl = response.picture.data.url;
+    localStorage.loggedIn = true;
+	}else{
+		console.log("Your browser does not support web storage.");
+  }
+
+ 
+  
   window.location.replace("http://localhost:3000/home");
 }

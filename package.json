@@ -14,8 +14,10 @@
   "dependencies": {
     "express": "3.x",
     "express3-handlebars": "*",
+    "jquery-mobile": "^1.5.0-alpha.1",
     "mongodb": "*",
     "mongoose": "*",
+    "web-storage": "^1.0.0",
     "yelp-fusion": "^2.0.3"
   },
   "engines": {

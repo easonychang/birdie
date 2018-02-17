@@ -1,5 +1,5 @@
 html, body {
-    padding-bottom: 30px;
+    /*padding-bottom: 30px;*/
     margin: 0;
 }
 
@@ -52,7 +52,7 @@ p, h1 {
 }
 
 .card-img-top{
-	width:300px;
+	width:260px;
     padding-top: 5%;
 }
 

@@ -5,12 +5,13 @@
 
 'use strict';
 const yelp = require('yelp-fusion');
+//var localStorage = require('web-storage')().localStorage;
 const apiKey = 'WiNraPNc4ZKOeIZGbwBDUVOMUXnfGNxYo_-MlkjtZ7-C4nAVuDPvD8bxJdQ90xG2-0iTampc0TbS6qVtMV88kV1v7DQWgXuWdo8fUFgrGKNmMIVLMukPWVP_xuR9WnYx';
 var data = require('../data.json');
 
 exports.recommendedView = function(req, res){
   
-    
+    var userInput = req.query.userInput;
     
 
     const searchRequest = {
