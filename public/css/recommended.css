@@ -1,9 +1,15 @@
 html, body {
-    /*padding-bottom: 30px;*/
+    padding-bottom: 30px;
     margin: 0;
 }
 
 p, h1 {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
     margin: 0;
 }
 

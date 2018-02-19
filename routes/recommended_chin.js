@@ -6,7 +6,7 @@
 'use strict';
 const yelp = require('yelp-fusion');
 const apiKey = 'WiNraPNc4ZKOeIZGbwBDUVOMUXnfGNxYo_-MlkjtZ7-C4nAVuDPvD8bxJdQ90xG2-0iTampc0TbS6qVtMV88kV1v7DQWgXuWdo8fUFgrGKNmMIVLMukPWVP_xuR9WnYx';
-var data = require('../data.json');
+var restdata = require('../restdata.json');
 
 exports.recommendedView = function(req, res){
   
@@ -96,7 +96,7 @@ exports.recommendedView = function(req, res){
 
         console.log(display);
 
-        data.restaurant.push(newRest);
+        restdata.restaurant.push(newRest);
         
 
         res.render('recommended', display);

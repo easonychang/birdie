@@ -5,12 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    
 
     
-	 <!-- jQuery -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-    <!-- jQuery Mobile -->
-    <script src='/js/jquery.mobile.custom.min.js'></script>
     
 	
 	<!-- Bootstrap -->
@@ -23,37 +22,11 @@
 	
 	<!-- CSS -->
 	<link href="/css/recommended.css" rel="stylesheet">
-
+    <link href="/css/jTinder.css" rel="stylesheet">
 	
 	<!-- JS -->
 	<script src='/js/bootstrap.min.js'></script>
-    <script src='/js/recommended.js'></script>
-	
-    <!--<script>
-        $(function(){
-            // Call this function when the page loads (the "ready" event)
-            $('.swipe').on( "swipeleft", swipeleftHandler );
-            $('.swipe').on( "swiperight", swiperightHandler );
-            console.log("script connected");
- 
-        // Callback function references the event target and adds the 'swipeleft' class to it
-        function swipeleftHandler( event ){
-            $( event.target ).addClass( "swipeleft" );
-            alert("swiped left");
-            console.log("swiped left");
-            $('#output').hide();
-        }
-
-        function swiperightHandler( event ){
-            $( event.target ).addClass( "swiperight" );
-            alert("swiped right");
-            console.log("swiped right");
-            $('#output').hide();
-        }
-
-        });
-        </script> -->
-
+    
 
 
 
@@ -111,43 +84,69 @@
 </nav>
 		
 	<div class="container-fluid">
-        <div class="cardcontainer swipe">
-            <div class="col-5 card text-center" style="background-color: #ebebeb">
-                <img class="card-img-top" src="{{image_url}}" alt="Restaurant">
-                <div class="card-body">
-                    <h4 class="card-title text-center">{{name}}</h4>
-                    <p class="card-text text-center">
-                        {{categories}} <br>
-                    </p>
-                    <div class="text-center">
-                        <img src="{{rating_img}}">
-                        <p>{{review_count}} Reviews </p> 
-                        <img class = "yelplogo" src="/images/YelpLogo_Trademark/Screen/Yelp_trademark_RGB.png">
+        <div class="cardcontainer wrap">
+            <div id="tinderslide">
 
-                        
+                <ul>
+                
+                    {{#each restaurant}}
+                    <li>
+                        <div class="col-5 card text-center" style="background-color: #ebebeb">
+                            <img class="card-img-top" src="{{image_url}}" alt="Restaurant">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">{{name}}</h4>
+                                <p class="card-text text-center">
+                                    {{categories}} <br>
+                                </p>
+                                <div class="text-center">
+                                    <img src="{{rating_img}}">
+                                    <p>{{review_count}} Reviews </p> 
+                                    <img class = "yelplogo" src="/images/YelpLogo_Trademark/Screen/Yelp_trademark_RGB.png">
 
-                    </div>
-                    <div class="text-center choose">
-                        <a href="/home">
-                            <i class="fas fa-times-circle fa-3x"></i>
-                        </a>
-                        <a href="/friends">
-                            <i class="fas fa-check-circle fa-3x"></i>
-                        </a>
+                                    
 
-                        <!--<div id='output'><p>what<p></div>-->
-                    </div>
-                </div>
+                                </div>
+                                <div class ="like"></div>
+                                <div class ="dislike"></div>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
             </div>
         </div>
 	
+    <div class = "card">
+        <div class="text-center actions">
+            <a href="/home" class="dislike">
+                <i class="fas fa-times-circle fa-3x"></i>
+            </a>
+            <a href="/friends" class="like">
+                <i class="fas fa-check-circle fa-3x"></i>
+            </a>
+                                    
+        </div>
+    </div>
+        <!-- jTinder status text  -->
+        <div id="status"></div>
 
 
 		
 	
 	</div>
 
-	<script src="https://code.jquery.com/jquery.js"></script>
+    
+
+    <!-- jQuery lib -->
+    <script src="/js/jquery.min.js"></script>
+    <!-- transform2d lib -->
+    <script src="/js/jquery.transform2d.js"></script>
+    <!-- jTinder lib -->
+    <script src="/js/jquery.jTinder.js"></script>
+    <!-- jTinder initialization script -->
+    <script src="/js/swipe.js"></script>
+
     
 </body>
 </html>
