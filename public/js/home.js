@@ -13,16 +13,19 @@ $(document).ready(function() {
  */
 function initializePage() {
 	
-	$('#name').html("<h2> Hello, " + localStorage.name + "</h2>");
+	
     
 
-    //console.log(localStorage.loggedIn);
+    console.log(localStorage.loggedIn);
 
-    if(localStorage.loggedIn !== true){
+    if(localStorage.loggedIn === "loggedIn"){
+        $('#name').html("<h2> Hello, " + localStorage.facebookname + "</h2>");
         $('#icon').hide();    
         $('.userphoto').attr("src", localStorage.picurl);
     
 
+    }else{
+        //$('#name').html("<h2> Hello, " + localStorage.userentername + "</h2>");
     }
 	
 	

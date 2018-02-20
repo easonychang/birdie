@@ -21,9 +21,9 @@ function statusChangeCallback(response) {
 
 function changeUser(response){
   if(typeof(Storage) !== "undefined") {
-		localStorage.name = response.first_name;
+		localStorage.facebookname = response.first_name;
     localStorage.picurl = response.picture.data.url;
-    localStorage.loggedIn = true;
+    localStorage.loggedIn = "loggedIn";
     localStorage.friends = response.friends;
     
 	}else{
