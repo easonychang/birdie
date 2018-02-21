@@ -4,8 +4,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	 <!-- jQuery -->
+
+    <!-- jQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    
+
+    
+    
 	
 	<!-- Bootstrap -->
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -17,12 +22,13 @@
 	
 	<!-- CSS -->
 	<link href="/css/recommended.css" rel="stylesheet">
-
+    <link href="/css/jTinder.css" rel="stylesheet">
 	
 	<!-- JS -->
 	<script src='/js/bootstrap.min.js'></script>
-	
-	
+    
+
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -56,7 +62,7 @@
             <li> <a href="./"> Home </a></li>
             <li> <a href=""> Calendar </a></li>	
 			<li> <a href=""> Profile </a> </li>
-			<!--<li> <a href=""> Friends </a></li>
+			<li> <a href=""> Friends </a></li>
             
         </ul>
     </div>
@@ -78,40 +84,69 @@
 </nav>
 		
 	<div class="container-fluid">
-        <div class="cardcontainer">
-            <div class="col-5 card text-center" style="background-color: #ebebeb">
-                <img class="card-img-top" src="{{image_url}}" alt="Restaurant">
-                <div class="card-body">
-                    <h4 class="card-title text-center">{{name}}</h4>
-                    <p class="card-text text-center">
-                        {{categories}} <br>
-                    </p>
-                    <div class="text-center">
-                        <img src="{{rating_img}}">
-                        <p>{{review_count}} Reviews </p> 
-                        <img class = "yelplogo" src="/images/YelpLogo_Trademark/Screen/Yelp_trademark_RGB.png">
+        <div class="cardcontainer wrap">
+            <div id="tinderslide">
 
-                        <!--<p>distance meter</p>-->
+                <ul>
+                
+                    {{#each restaurant}}
+                    <li>
+                        <div class="col-5 card text-center" style="background-color: #ebebeb">
+                            <img class="card-img-top" src="{{image_url}}" alt="Restaurant">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">{{name}}</h4>
+                                <p class="card-text text-center">
+                                    {{categories}} <br>
+                                </p>
+                                <div class="text-center">
+                                    <img src="{{rating_img}}">
+                                    <p>{{review_count}} Reviews </p> 
+                                    <img class = "yelplogo" src="/images/YelpLogo_Trademark/Screen/Yelp_trademark_RGB.png">
 
-                    </div>
-                    <div class="text-center choose">
-                        <a href="/home">
-                            <i class="fas fa-times-circle fa-3x"></i>
-                        </a>
-                        <a href="/friends">
-                            <i class="fas fa-check-circle fa-3x"></i>
-                        </a>
-                    </div>
-                </div>
+                                    
+
+                                </div>
+                                <div class ="like"></div>
+                                <div class ="dislike"></div>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
             </div>
         </div>
 	
+    <div class = "card">
+        <div class="text-center actions">
+            <a href="/home" class="dislike">
+                <i class="fas fa-times-circle fa-3x"></i>
+            </a>
+            <a href="/friends" class="like">
+                <i class="fas fa-check-circle fa-3x"></i>
+            </a>
+                                    
+        </div>
+    </div>
+        <!-- jTinder status text  -->
+        <!--<div id="status"></div> -->
 
 
 		
 	
 	</div>
 
-	<script src="https://code.jquery.com/jquery.js"></script>
+    
+
+    <!-- jQuery lib -->
+    <script src="/js/jquery.min.js"></script>
+    <!-- transform2d lib -->
+    <script src="/js/jquery.transform2d.js"></script>
+    <!-- jTinder lib -->
+    <script src="/js/jquery.jTinder.js"></script>
+    <!-- jTinder initialization script -->
+    <script src="/js/swipe.js"></script>
+
+    
 </body>
 </html>

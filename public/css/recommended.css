@@ -7,6 +7,12 @@ p, h1 {
     margin: 0;
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 .navbar {
     margin-bottom: 0 !important;
     text-align: center;
@@ -52,7 +58,7 @@ p, h1 {
 }
 
 .card-img-top{
-	width:300px;
+	width:260px;
     padding-top: 5%;
 }
 

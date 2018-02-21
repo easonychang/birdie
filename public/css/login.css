@@ -91,7 +91,7 @@ label {
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
   pointer-events: none;
-  font-size: 22px;
+  font-size: 18px;
 }
 label .req {
   margin: 2px;
@@ -162,7 +162,7 @@ textarea {
   outline: none;
   border-radius: 0;
   padding: 15px 0;
-  font-size: 2rem;
+  font-size: 25px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1em;
