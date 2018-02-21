@@ -105,6 +105,13 @@ p, h1 {
     text-align: center;
 }
 
+.confirm .btn {
+    width: 35%;
+}
+
+.modal-footer {
+    align-content: center;
+}
 
 /* Huge Monitor*/
 

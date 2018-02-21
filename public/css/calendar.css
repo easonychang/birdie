@@ -3,14 +3,25 @@ html, body {
     margin: 0;
 }
 
+#user {
+    margin: auto;
+    max-width: 100%;
+    text-align: left;
+    height: auto;
+}
+
+#padding {
+    padding-top: 10px;
+}
+
 p, h1 {
     margin: 0;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.friendName {
+    color: #454545;
+    text-decoration: none;
+    display: inline;
 }
 
 .navbar {
@@ -20,7 +31,6 @@ ul {
     border: 0px;
     box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
 }
-
 
 .navbar .navbar-nav {
     display: inline-block;
@@ -57,15 +67,6 @@ ul {
   margin-left: 10px;
 }
 
-.card-img-top{
-	width:260px;
-    padding-top: 5%;
-}
-
-.choose {
-    padding-bottom: 5%
-}
-
 .nav2 .fa{
     color: #454545;
 }
@@ -78,43 +79,46 @@ ul {
     color: #454545;
 }
 
-.nav2 .fa:hover {
+.fas {
+    display: inline;
+}
+
+.fa:hover {
     color: #A7DBD8;
 }
 
-.nav2 .fas:hover {
+.fas:hover {
     color: #A7DBD8;
 }
 
-.nav2 .far:hover {
+.far:hover {
     color: #A7DBD8;
 }
 
-.fa-times-circle{
-	color: red;
+.welcome{
+	margin: 30px;
 }
 
-.fa-check-circle{
-	color: green;
+
+.rest-card{
+	margin-top: 30px;
+    padding-bottom: 30px;
 }
 
-.yelplogo{
-	width:100px;
+.btn-outline-secondary {
+    width: 100%;
+    text-align: center;
 }
 
-.cardcontainer{
-    position: relative;
-    height: 100%;
+.list-group.active:hover {
+    background-color: #000000;
+    color: #000;
 }
 
-.card {
-    top: 3%;
+.btn-secondary {
+    width: 100%;
+    text-align: center;
 }
-
-.card-title {
-    padding-top: 5%;
-}
-
 
 /* Huge Monitor*/
 
@@ -189,5 +193,3 @@ ul {
     }
 
 }
-
-
