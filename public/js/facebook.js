@@ -14,10 +14,24 @@ function statusChangeCallback(response) {
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
         console.log('Successfully logged in with Facebook');
-         FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
+        var accessToken = response.authResponse.user_friends        ;
+        FB.api('/me?fields=name,first_name,picture.type(square),friends', changeUser);
   }
 }
 
 function changeUser(response){
-  window.location.replace("https://a6-birdie.herokuapp.com/home");
+  if(typeof(Storage) !== "undefined") {
+		localStorage.facebookname = response.first_name;
+    localStorage.picurl = response.picture.data.url;
+    localStorage.loggedIn = "loggedIn";
+    localStorage.friends = response.friends;
+    
+	}else{
+		console.log("Your browser does not support web storage.");
+  }
+
+  //console.log(response.friends);
+  
+  window.location.replace("http://localhost:3000/home");
+
 }
