@@ -11,6 +11,16 @@ html, body {
     height: auto;
 }
 
+.userphoto1{
+    border-radius: 50%;
+    
+}
+
+.userphoto2{
+    border-radius: 50%;
+}
+
+
 #padding {
     padding-top: 10px;
 }
