@@ -11,11 +11,19 @@ var displaydata = require('../displaydata.json');
 
 exports.recommendedView = function(req, res){
   
-    
+
+    //console.log(req.params);
+    var searchValue = req.params.cuisine;
     
 
+    if(searchValue === undefined){
+        searchValue = 'korean';
+    }
+
+    console.log(searchValue);
+
     const searchRequest = {
-      term:'vietnamese',
+      term: searchValue,
       location: 'san diego, ca'
     };
 

@@ -18,13 +18,7 @@ $("#tinderslide").jTinder({
 		console.log(dislike_count);
 		
 		if(item.index()==0){
-			if(dislike_count === 5){ //currently hardcoded because we only render 5 restaurants
-				//every recommendation was disliked
 				window.location.replace("/home");
-			}else{
-				window.location.replace("/friends");
-			}
-			
 		}
     },
 	// like callback

@@ -63,11 +63,11 @@ app.get('/calendar', calendar.calendarView);
 
 app.get('/temp',temp.tempView);
 
-app.get('/recommended-viet', recommended_viet.recommendedView);
-app.get('/recommended-mexi', recommended_mexi.recommendedView);
-app.get('/recommended-chin', recommended_chin.recommendedView);
-app.get('/recommended-kore', recommended_kore.recommendedView);
-app.get('/profile', profile.profileView);
+app.get('/recommended/:cuisine', recommended.recommendedView);
+//app.get('/recommended-mexi', recommended_mexi.recommendedView);
+//app.get('/recommended-chin', recommended_chin.recommendedView);
+//app.get('/recommended-kore', recommended_kore.recommendedView);
+//app.get('/profile', profile.profileView);
 
 app.get('/calendar2', calendar2.calendarrView);
 
