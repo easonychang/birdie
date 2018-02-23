@@ -4,9 +4,13 @@
 var like_count = 0;
 var dislike_count = 0;
 var total_count = 0;
+var total_item = document.getElementById("myul").getElementsByTagName("li").length;
+
+//console.log(document.getElementById("myul").getElementsByTagName("li").length);
 
 $("#tinderslide").jTinder({
 	// dislike callback
+	
 	
 	
     onDislike: function (item) {
@@ -28,8 +32,12 @@ $("#tinderslide").jTinder({
 		like_count += 1;
 		total_count += 1;
 
-		console.log(item.prevObject[5-total_count].querySelector(".card-title").textContent);
-		localStorage.restName = item.prevObject[5-total_count].querySelector(".card-title").textContent;
+		
+
+		
+
+		console.log(item.prevObject[total_item-total_count].querySelector(".card-title").textContent);
+		localStorage.restName = item.prevObject[total_item-total_count].querySelector(".card-title").textContent;
 		console.log(localStorage.restName);
 		
 		window.location.replace("/friends");
