@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"start" : "7:00 Tuesday",
+			"place" : "Phuong Trang",
+			"friend" : "Andy :)"
+		},
+		{
+			"start" : "8:00 Wednesday",
+			"place" : "In N Out",
+			"friend" : "Eunice"			
+		},
+		{
+			"start" : "8:30 Friday",
+			"place" : "Sushi Ki",
+			"friend" : "Surabhi"		
+		}
+	]
+}

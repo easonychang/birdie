@@ -10,6 +10,11 @@ html, body {
     height: auto;
 }
 
+.userphoto{
+    border-radius: 50%;
+}
+
+
 #padding {
     padding-top: 10px;
 }

@@ -22,6 +22,8 @@ var recommended_chin = require('./routes/recommended_chin');
 var recommended_kore = require('./routes/recommended_kore');
 var recommended_mexi = require('./routes/recommended_mexi');
 var calendar = require('./routes/calendar');
+var calendar2 = require('./routes/calendar2');
+var profile = require('./routes/profile');
 
 var temp = require('./routes/temp');
 
@@ -65,6 +67,9 @@ app.get('/recommended-viet', recommended_viet.recommendedView);
 app.get('/recommended-mexi', recommended_mexi.recommendedView);
 app.get('/recommended-chin', recommended_chin.recommendedView);
 app.get('/recommended-kore', recommended_kore.recommendedView);
+app.get('/profile', profile.profileView);
+
+app.get('/calendar2', calendar2.calendarrView);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

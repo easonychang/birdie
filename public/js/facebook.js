@@ -33,4 +33,5 @@ function changeUser(response){
   //console.log(response.friends);
   
   window.location.replace("http://localhost:3000/home");
+
 }
