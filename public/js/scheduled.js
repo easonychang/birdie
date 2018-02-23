@@ -30,6 +30,8 @@ function initializePage() {
         
         $('#icon1').hide();  
         $('.userphoto1').attr("src", localStorage.picurl);
+    } else {
+        $('.userphoto1').hide();
     }
 
 

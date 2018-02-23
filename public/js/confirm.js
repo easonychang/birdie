@@ -25,6 +25,8 @@ function initializePage() {
     if(localStorage.loggedIn === "loggedIn"){
         $('#icon').hide();  
         $('.userphoto').attr("src", localStorage.picurl);
+    }else {
+        $('.userphoto').hide();
     }
     
 	$('.mb-1').html("<h5>" + localStorage.friendName +"</h5>");

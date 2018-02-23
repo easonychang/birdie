@@ -24,6 +24,8 @@ function initializePage() {
     if(localStorage.loggedIn === "loggedIn"){
         $('#icon').hide();  
         $('.userphoto').attr("src", localStorage.picurl);
+    } else {
+        $('.userphoto').hide();
     }
     
     $(".list-group a").click(friendClick);
