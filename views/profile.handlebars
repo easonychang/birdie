@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>birdie</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- jQuery -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+        <!-- Font Awesome -->
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href ="/css/profile.css" rel="stylesheet">
+
+        <!-- JS -->
+        <script src='/js/bootstrap.min.js'></script>
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-fixed-bottom nav2">
+            <div class="container-fluid">
+
+                <ul class="nav navbar-nav">
+                    <li><a href="/profile"><i class="fas fa-user-circle" aria-hidden='true'></i></a></li>
+                    <li><a href="/home"><i class='fas fa-home' aria-hidden='true'></i></a></li>
+                    <li><a href="/temp"><i class="far fa-calendar-alt"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+
+            <div class="profile-top">
+                <div class="profile-img">
+                    <img class="profilepic" src="images/eason.jpg"/>
+                </div>
+                <div class="profile-header">
+                    <div class="username">Eason Chang</div>
+                    <div class="description">Big foodie</div>
+                </div>
+            </div>
+            <div class="profile-bottom">
+                <div class="info-left">
+                    <h5>Favorite food:</h5><br>
+                    <h5>Disliked food:</h5><br>
+                    <h5>Allergies:</h5><br>
+                    <h5>Can drive:</h5><br>
+                    <h5>Budget:</h5>
+                </div>
+
+                <div class="info-right">
+                    <div class="dropdown" id="favorite">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Chinese
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">American</a>
+                            <a class="dropdown-item disabled" href="#">Chinese</a>
+                            <a class="dropdown-item" href="#">Japanese</a>
+                            <a class="dropdown-item" href="#">Korean</a>
+                            <a class="dropdown-item" href="#">Vietnamese</a>
+                        </div>
+                    </div>
+                    <div style="height: 22px">&nbsp;</div>
+                    <div class="dropdown" id="disliked">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Japanese
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">American</a>
+                            <a class="dropdown-item" href="#">Chinese</a>
+                            <a class="dropdown-item disabled" href="#">Japanese</a>
+                            <a class="dropdown-item" href="#">Korean</a>
+                            <a class="dropdown-item" href="#">Vietnamese</a>
+                        </div>
+                    </div>
+                    <div style="height: 22px">&nbsp;</div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Peanuts
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Eggs</a>
+                            <a class="dropdown-item" href="#">Milk</a>
+                            <a class="dropdown-item disabled" href="#">Peanuts</a>
+                            <a class="dropdown-item" href="#">Shellfish</a>
+                            <a class="dropdown-item" href="#">Soy</a>
+                            <a class="dropdown-item" href="#">Wheat</a>
+                        </div>
+                    </div>
+                    <div style="height: 22px">&nbsp;</div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            No
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Yes</a>
+                            <a class="dropdown-item disabled" href="#">No</a>
+                        </div>
+                    </div>
+                    <div style="height: 22px">&nbsp;</div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Up to $30
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">$10</a>
+                            <a class="dropdown-item" href="#">$20</a>
+                            <a class="dropdown-item disabled" href="#">$30</a>
+                            <a class="dropdown-item" href="#">$40</a>
+                            <a class="dropdown-item" href="#">...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div class="confirm text-center">
+            <a class="btn btn-danger" href="#" role="button">Back</a>
+            <a class="btn btn-success" href="#" role="button">Save</a>
+        </div>
+
+    </body>
+</html>
