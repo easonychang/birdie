@@ -23,7 +23,11 @@
         <!-- JS -->
         <script src='/js/bootstrap.min.js'></script>
         <script src='/js/confirm.js'></script>
-
+         <script>
+            function goBack() {
+            window.history.back()
+            }   
+        </script>
 
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -71,6 +75,7 @@
             <div class="container-fluid">
 
                 <ul class="nav navbar-nav">
+                    <li><button class = "btn btn-secondary backButton" onclick="goBack()"><i class="fas fa-angle-left"></i></button>
                     <li><a href="/profile"><i class="fas fa-user-circle" aria-hidden='true'></i></a></li>
                     <li><a href="/home"><i class='fas fa-home' aria-hidden='true'></i></a></li>
                     <li><a href="/calendar2"><i class="far fa-calendar-alt"></i></a></li>
