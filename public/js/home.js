@@ -27,6 +27,7 @@ function initializePage() {
     }
     else {
          $('#name').html("<h2> Hello, User </h2>");
+         $('.userphoto').hide();
     }	
 	
 }

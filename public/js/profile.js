@@ -14,7 +14,9 @@ function initializePage() {
     }
     else if(localStorage.username !== undefined && localStorage.username !== null) {
         user = localStorage.username;
-    } 
+    } else {
+        $('.userphoto').hide();
+    }
 
 
    	

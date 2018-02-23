@@ -14,6 +14,13 @@ html, body {
     width: 50px;
 }
 
+.profile-img {
+    width: 30%;
+}
+
+.profile-header {
+    width: 70%;
+}
 
 .profilepic{
     width: 100px;
@@ -33,7 +40,7 @@ html, body {
 .profile-bottom {
     padding-left: 7%;
     padding-right: 7%;
-    padding-top: 60px;
+    padding-top: 50px;
     width: 100%;
 }
 
@@ -58,12 +65,13 @@ html, body {
 .username {
     font-weight: bold;
     font-size: 25px;
-    padding-left: 30px;
     line-height: 35px;
+    text-align: left;
 }
 
 .description {
     font-size: 20px;
+    text-align: left;
 }
 
 .confirm {
