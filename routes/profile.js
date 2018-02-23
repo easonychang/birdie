@@ -6,5 +6,5 @@
 //var localStorage = require('web-storage')().localStorage;
 
 exports.profileView = function(req, res){
-  res.render('profile');
+    res.render('profile');
 };
