@@ -9,6 +9,12 @@ html, body {
     height: auto;
 }
 
+.userphoto{
+    border-radius: 50%;
+    width: 50px;
+}
+
+
 .profilepic{
     width: 100px;
     height: 100px;

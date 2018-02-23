@@ -12,6 +12,7 @@ html, body {
 
 .userphoto{
     border-radius: 50%;
+    width: 60px;
 }
 
 #fooddiv {
