@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html >
+<html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Event Calendar Widget</title>
         <link rel="stylesheet" href="css/calendar2.css">
         <link href="/css/home.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -22,11 +21,17 @@
             <div class="container-fluid">
 
                 <ul class="nav navbar-nav">
-                    <li><a href="/profile"><i class="fas fa-user-circle" aria-hidden='true'></i></a></li>
+                    <li><a href="/temp"><i class="fas fa-user-circle" aria-hidden='true'></i></a></li>
                     <li><a href="/home"><i class='fas fa-home' aria-hidden='true'></i></a></li>
                     <li><a href="/calendar2"><i class="far fa-calendar-alt"></i></a></li>
                 </ul>
             </div>
+
+
         </nav>
+        {{#each events}}
+        <p> <center>You have an event on {{start}} at {{place}} with {{friend}}</center></p>
+        <hr>
+        {{/each}}
     </body>
 </html>

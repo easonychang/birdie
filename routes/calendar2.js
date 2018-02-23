@@ -1,8 +1,8 @@
+var events = require("../events.json");
 /*
  * GET calendar2 page.
  */
 
 exports.calendarrView = function(req, res){
-	console.log("i hate this");
-  res.render('calendar2');
+  res.render('calendar2', events);
 }; 
