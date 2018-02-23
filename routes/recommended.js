@@ -11,6 +11,11 @@ var displaydata = require('../displaydata.json');
 
 exports.recommendedView = function(req, res){
   
+    //console.log(displaydata.restaurant.length);
+
+    //popping all the restaurants that are in the data file
+    displaydata.restaurant.length = 0;
+    
 
     //console.log(req.params);
     var searchValue = req.params.cuisine;
