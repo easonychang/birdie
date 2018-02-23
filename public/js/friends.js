@@ -26,7 +26,7 @@ function initializePage() {
         $('.userphoto').attr("src", localStorage.picurl);
     }
     
-    $("a").click(friendClick);
+    $(".list-group a").click(friendClick);
 	
 }
 

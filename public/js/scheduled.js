@@ -13,12 +13,11 @@ function initializePage() {
 	var user = "User";
 
     
-    if(localStorage.username !== undefined && localStorage.username !== null) {
+    if(localStorage.loggedIn === "loggedIn"){
+        user = localStorage.facebookname;
+    } else if(localStorage.username !== undefined && localStorage.username !== null) {
         user = localStorage.username;
     } 
-    else if(localStorage.loggedIn === "loggedIn"){
-        user = localStorage.facebookname;
-    }
     
 
     console.log(localStorage.restName);

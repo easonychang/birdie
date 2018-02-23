@@ -14,7 +14,7 @@ function statusChangeCallback(response) {
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
         console.log('Successfully logged in with Facebook');
-        var accessToken = response.authResponse.user_friends        ;
+        var accessToken = response.authResponse.user_friends;
         FB.api('/me?fields=name,first_name,picture.type(square),friends', changeUser);
   }
 }
