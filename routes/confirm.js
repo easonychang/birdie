@@ -1,9 +1,17 @@
-
+var data = require("../events.json");
 /*
  * GET confirm page.
  */
 
 exports.confirmView = function(req, res){
+	newEvent =	{
 
-  res.render('confirm');
-};
+			"start" : req.query.time,
+			"place" : req.query.place,
+			"friend" : req.query.friend
+
+		};
+
+	data.events.push(newEvent);
+	res.render('confirm');
+}
