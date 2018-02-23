@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +27,12 @@
             <li><a href="/calendar2"><i class="far fa-calendar-alt"></i></a></li>
     	</ul>
 	</div>
+
+
 </nav>
+		{{#each events}}
+		<p> <center>You have an event on {{start}} at {{place}} with {{friend}}</center></p>
+		<hr>
+		{{/each}}
 	</body>
 </html>
