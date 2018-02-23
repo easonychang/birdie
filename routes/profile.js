@@ -8,3 +8,4 @@
 exports.profileView = function(req, res){
     res.render('profile');
 };
+
