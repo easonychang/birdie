@@ -12,76 +12,8 @@ var displaydata = require('../displaydata.json');
 exports.recommendedView = function(req, res){
   
     //console.log(displaydata.restaurant.length);
-
-    //popping all the restaurants that are in the data file
-    displaydata.restaurant.length = 0;
-    
-
-    //console.log(req.params);
-    var searchValue = req.params.cuisine;
-    
-
-    if(searchValue === undefined){
-        searchValue = 'korean';
-    }
-
-    console.log(searchValue);
-
-    const searchRequest = {
-      term: searchValue,
-      location: 'san diego, ca'
-    };
-
-    const client = yelp.client(apiKey);
-
-    client.search(searchRequest).then(response => {
-        const result = response.jsonBody.businesses;
-        const prettyJson = JSON.stringify(result, null, 4);
-      
-        //result[4] start
-        client.business(result[4].id).then(response => {
-            displayData(response);
-            //result[3] start
-            client.business(result[3].id).then(response => {
-                displayData(response);
-                //result[2] start
-                client.business(result[2].id).then(response => {
-                    displayData(response);
-                    //result[1] start
-                    client.business(result[1].id).then(response => {
-                        displayData(response);
-                        //result[0] start
-                        client.business(result[0].id).then(response => {
-                            displayData(response);
-                            res.render('recommended', displaydata);
-
-                        }).catch(e => {
-                            console.log(e);
-                        }); //result[0] end 
-
-                    }).catch(e => {
-                        console.log(e);
-                    }); //result[1] end 
-
-                }).catch(e => {
-                    console.log(e);
-                }); //result[2] end 
-
-            }).catch(e => {
-                console.log(e);
-            }); //result[3] end 
-
-        }).catch(e => {
-            console.log(e);
-        }); //result[4] end 
-
-        
-
-    }).catch(e => {
-      console.log(e);
-    });
-
-
+    res.render('load');
+    return;
 };
 
 
@@ -173,4 +105,76 @@ function displayData(response){
         displaydata.restaurant.push(display);
     }
 
+}
+
+exports.getRec = function (req,res){
+    // parsing request
+    // base on searchValue
+    //popping all the restaurants that are in the data file
+    displaydata.restaurant.length = 0;
+    
+    //console.log(req.params);
+    var searchValue = req.params.cuisine;
+    
+
+    if(searchValue === undefined){
+        searchValue = 'korean';
+    }
+
+    console.log(searchValue);
+
+    const searchRequest = {
+      term: searchValue,
+      location: 'san diego, ca'
+    };
+
+    const client = yelp.client(apiKey);
+
+    client.search(searchRequest).then(response => {
+        const result = response.jsonBody.businesses;
+        const prettyJson = JSON.stringify(result, null, 4);
+      
+        //result[4] start
+        client.business(result[4].id).then(response => {
+            displayData(response);
+            //result[3] start
+            client.business(result[3].id).then(response => {
+                displayData(response);
+                //result[2] start
+                client.business(result[2].id).then(response => {
+                    displayData(response);
+                    //result[1] start
+                    client.business(result[1].id).then(response => {
+                        displayData(response);
+                        //result[0] start
+                        client.business(result[0].id).then(response => {
+                            displayData(response);
+                            res.render('recommended', displaydata);
+                            //res.json(displaydata);
+
+                        }).catch(e => {
+                            console.log(e);
+                        }); //result[0] end 
+
+                    }).catch(e => {
+                        console.log(e);
+                    }); //result[1] end 
+
+                }).catch(e => {
+                    console.log(e);
+                }); //result[2] end 
+
+            }).catch(e => {
+                console.log(e);
+            }); //result[3] end 
+
+        }).catch(e => {
+            console.log(e);
+        }); //result[4] end 
+
+        
+
+    }).catch(e => {
+      console.log(e);
+    });
 }

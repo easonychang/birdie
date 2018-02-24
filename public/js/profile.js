@@ -11,6 +11,7 @@ function initializePage() {
         user = localStorage.facebookname;
         //console.log(localStorage.picurl);
         $('.userphoto').attr("src", localStorage.picurl);
+        $('#icon').hide();
     }
     else if(localStorage.username !== undefined && localStorage.username !== null) {
         user = localStorage.username;
