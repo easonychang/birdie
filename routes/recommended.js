@@ -117,11 +117,20 @@ exports.getRec = function (req,res){
     var searchValue = req.params.cuisine;
     
 
-    if(searchValue === undefined){
-        searchValue = 'korean';
+    //randomize if user doens't know what to pick
+    if(searchValue === "recommended"){
+        var cuisine = ["japanese", "korean", "mexican", "american", "indian", "chinese", "italian", "vietnamese", "french", "caribbean"];
+        //console.log(cuisine.length);
+
+        var index = Math.floor(Math.random()*cuisine.length);
+
+        console.log(cuisine[index]);
+        
+        searchValue = cuisine[index];
     }
 
-    console.log(searchValue);
+
+    console.log("searchVale is: " + searchValue);
 
     const searchRequest = {
       term: searchValue,
