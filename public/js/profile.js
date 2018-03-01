@@ -20,7 +20,9 @@ function initializePage() {
     }
 
 
-   	
+    
 
     $('#thisone').html("<h4>" + user + "</h4>");
+
+  
 }

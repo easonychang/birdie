@@ -35,7 +35,7 @@ $("#tinderslide").jTinder({
 		
 
 		
-
+		//this gets us the name of the restraunt that we swipe right
 		console.log(item.prevObject[total_item-total_count].querySelector(".card-title").textContent);
 		localStorage.restName = item.prevObject[total_item-total_count].querySelector(".card-title").textContent;
 		console.log(localStorage.restName);
