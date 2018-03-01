@@ -23,6 +23,7 @@ function initializePage() {
         $('#icon').hide();    
         $('.userphoto').attr("src", localStorage.picurl);
     }else if(user !== undefined && user !== null) {
+        $('.userphoto').hide();
         $('#name').html("<h2> Hello, " + localStorage.username + "</h2>");
     }
     else {

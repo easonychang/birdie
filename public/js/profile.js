@@ -14,6 +14,7 @@ function initializePage() {
         $('#icon').hide();
     }
     else if(localStorage.username !== undefined && localStorage.username !== null) {
+        $('.userphoto').hide();
         user = localStorage.username;
     } else {
         $('.userphoto').hide();
