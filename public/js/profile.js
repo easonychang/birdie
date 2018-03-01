@@ -19,8 +19,5 @@ function initializePage() {
         $('.userphoto').hide();
     }
 
-
-   	
-
     $('#thisone').html("<h4>" + user + "</h4>");
 }

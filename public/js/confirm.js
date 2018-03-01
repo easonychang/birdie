@@ -12,23 +12,22 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	
-	
-    
 
-    console.log(localStorage.restName);
+    console.log(localStorage.username);
+    var user = localStorage.username;
 
-    
-    $('.eatwith').html("<h5> You want to eat at " + localStorage.restName + " with </h2>");
-    
-    
+    console.log(localStorage.facebookname)
+
     if(localStorage.loggedIn === "loggedIn"){
-        $('#icon').hide();  
+        $('#name').html("<h2> Hello, " + localStorage.facebookname + "</h2>");
+        $('#icon').hide();    
         $('.userphoto').attr("src", localStorage.picurl);
-    }else {
-        $('.userphoto').hide();
+    }else if(user !== undefined && user !== null) {
+        $('#name').html("<h2> Hello, " + localStorage.username + "</h2>");
     }
+    else {
+         $('#name').html("<h2> Hello, User </h2>");
+         $('.userphoto').hide();
+    }   
     
-	$('.mb-1').html("<h5>" + localStorage.friendName +"</h5>");
-	
 }
