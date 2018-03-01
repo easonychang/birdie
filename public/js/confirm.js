@@ -12,9 +12,6 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	
-	
-    var user = localStorage.username;
 
     console.log(localStorage.restName);
 
@@ -23,15 +20,12 @@ function initializePage() {
     
     
     if(localStorage.loggedIn === "loggedIn"){
-        $('#name').html("<h2> Hello, " + localStorage.facebookname + "</h2>");
-        $('#icon').hide();    
+        $('#icon').hide();  
         $('.userphoto').attr("src", localStorage.picurl);
-    }else if(user !== undefined && user !== null) {
-        $('#name').html("<h2> Hello, " + localStorage.username + "</h2>");
+    }else {
+        $('.userphoto').hide();
     }
-    else {
-         $('#name').html("<h2> Hello, User </h2>");
-         $('.userphoto').hide();
-    }   
+    
+	$('.mb-1').html("<h5>" + localStorage.friendName +"</h5>");
 	
 }
