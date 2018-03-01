@@ -12,12 +12,16 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-
-    console.log(localStorage.username);
+	
+	
     var user = localStorage.username;
 
-    console.log(localStorage.facebookname)
+    console.log(localStorage.restName);
 
+    
+    $('.eatwith').html("<h5> You want to eat at " + localStorage.restName + " with </h2>");
+    
+    
     if(localStorage.loggedIn === "loggedIn"){
         $('#name').html("<h2> Hello, " + localStorage.facebookname + "</h2>");
         $('#icon').hide();    
@@ -29,5 +33,5 @@ function initializePage() {
          $('#name').html("<h2> Hello, User </h2>");
          $('.userphoto').hide();
     }   
-    
+	
 }
