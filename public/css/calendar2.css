@@ -259,15 +259,15 @@ body {
   padding: 0 0 0 7px;
 }
 
-/*.legend {
+.legend {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 30px;
-  background: rgba(90, 90, 90, 1);
+  background: rgba(250, 250, 250, 0);
   line-height: 30px;
 
-}*/
+}
 
 .entry {
   position: relative;
