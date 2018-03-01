@@ -58,7 +58,8 @@ ul {
 }
 
 .card-img-top{
-	width:260px;
+    width:260px;
+    height: 80%;
     padding-top: 5%;
 }
 

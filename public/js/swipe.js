@@ -3,26 +3,26 @@
  */
 var like_count = 0;
 var dislike_count = 0;
+var total_count = 0;
+var total_item = document.getElementById("myul").getElementsByTagName("li").length;
+
+//console.log(document.getElementById("myul").getElementsByTagName("li").length);
 
 $("#tinderslide").jTinder({
 	// dislike callback
+	
 	
 	
     onDislike: function (item) {
 	    // set the status text
 		//$('#status').html('Dislike image ' + (item.index()+1));
 		dislike_count += 1;
+		total_count += 1;
 
 		console.log(dislike_count);
 		
 		if(item.index()==0){
-			if(dislike_count === 5){ //currently hardcoded because we only render 5 restaurants
-				//every recommendation was disliked
 				window.location.replace("/home");
-			}else{
-				window.location.replace("/friends");
-			}
-			
 		}
     },
 	// like callback
@@ -30,17 +30,27 @@ $("#tinderslide").jTinder({
 	    // set the status text
 		//$('#status').html('Like image ' + (item.index()+1));
 		like_count += 1;
+		total_count += 1;
+
+		
+
+		
+
+		console.log(item.prevObject[total_item-total_count].querySelector(".card-title").textContent);
+		localStorage.restName = item.prevObject[total_item-total_count].querySelector(".card-title").textContent;
+		console.log(localStorage.restName);
+		
+		window.location.replace("/friends");
 		
 		
-		
-		if(item.index()==0){
+		/*if(item.index()==0){
 			if(like_count > 1){
 				//locally store the liked pages
 				//load ranking page and ask users to rank them, then redirect to friend
 				
 			}
 			window.location.replace("/friends");
-		}
+		}*/
     },
 	animationRevertSpeed: 200,
 	animationSpeed: 400,

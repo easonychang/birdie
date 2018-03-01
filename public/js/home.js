@@ -16,8 +16,10 @@ function initializePage() {
     console.log(localStorage.username);
     var user = localStorage.username;
 
+    console.log(localStorage.facebookname)
+
     if(localStorage.loggedIn === "loggedIn"){
-        $('#name').html("<h2> Hello, " + localStorage.email + "</h2>");
+        $('#name').html("<h2> Hello, " + localStorage.facebookname + "</h2>");
         $('#icon').hide();    
         $('.userphoto').attr("src", localStorage.picurl);
     }else if(user !== undefined && user !== null) {
@@ -25,6 +27,7 @@ function initializePage() {
     }
     else {
          $('#name').html("<h2> Hello, User </h2>");
+         $('.userphoto').hide();
     }	
 	
 }

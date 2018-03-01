@@ -15,7 +15,7 @@ var recommended = require('./routes/recommended');
 var login = require('./routes/login');
 var friends = require('./routes/friends');
 var confirm = require('./routes/confirm');
-var sync = require('./routes/sync');
+var load = require('./routes/load');
 var scheduled = require('./routes/scheduled');
 var recommended_viet = require('./routes/recommended_viet');
 var recommended_chin = require('./routes/recommended_chin');
@@ -23,6 +23,7 @@ var recommended_kore = require('./routes/recommended_kore');
 var recommended_mexi = require('./routes/recommended_mexi');
 var calendar = require('./routes/calendar');
 var calendar2 = require('./routes/calendar2');
+var profile = require('./routes/profile');
 
 var temp = require('./routes/temp');
 
@@ -56,16 +57,18 @@ app.get('/recommended', recommended.recommendedView);
 app.get('/home', home.view);
 app.get('/friends', friends.friendsView);
 app.get('/confirm', confirm.confirmView);
-app.get('/sync', sync.syncView);
+app.get('/load', load.loadView);
 app.get('/scheduled', scheduled.scheduledView);
 app.get('/calendar', calendar.calendarView);
 
 app.get('/temp',temp.tempView);
 
-app.get('/recommended-viet', recommended_viet.recommendedView);
-app.get('/recommended-mexi', recommended_mexi.recommendedView);
-app.get('/recommended-chin', recommended_chin.recommendedView);
-app.get('/recommended-kore', recommended_kore.recommendedView);
+app.get('/recommended/:cuisine', recommended.recommendedView);
+app.get('/getRecommended/:cuisine', recommended.getRec);
+//app.get('/recommended-mexi', recommended_mexi.recommendedView);
+//app.get('/recommended-chin', recommended_chin.recommendedView);
+//app.get('/recommended-kore', recommended_kore.recommendedView);
+app.get('/profile', profile.profileView);
 
 app.get('/calendar2', calendar2.calendarrView);
 
