@@ -3,9 +3,9 @@
 }
 
 body {
-
  font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
  font-weight: 100;
+ overflow: hidden;
  color: rgba(0, 0, 0, 1);
  margin: 0;
  padding: 0;
