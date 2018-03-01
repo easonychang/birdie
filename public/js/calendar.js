@@ -54,8 +54,22 @@
   Calendar.prototype.drawMonth = function() {
     var self = this;
     
+    //display current month
+    var currMonth = this.current._d.getMonth()+1;
+
+    //added logic onnly display events if they are of current month
     this.events.forEach(function(ev) {
-     ev.date = self.current.clone().date(ev.date);
+      var theMonth = (ev.dates).split("/")[0]; 
+      
+      
+      if(theMonth == currMonth){
+        //console.log("current month is: " + theMonth);
+        //only display if it's in the current month   
+        var theDay = (ev.dates).split("/")[1];
+        ev.date = self.current.clone().date(theDay);
+      }
+      
+      
     });
     
     
@@ -321,29 +335,29 @@
 
 !function() {
   var data = [
-    { eventName: 'Phuong Trang w/ Andy', calendar: 'Food', color: 'orange', date: '6' },
-    { eventName: 'In N Out w/ Eunice', calendar: 'Food', color: 'orange', date: '7' },
-    { eventName: 'Sushi Ki w/ Surahbi', calendar: 'Food', color: 'orange', date: '9'  },
-    { eventName: 'Lucha Libre w/ Eason', calendar: 'Food', color: 'orange' , date: '12' },
+    { eventName: 'Phuong Trang w/ Andy', calendar: 'Food', color: 'orange', dates: '3/6' },
+    { eventName: 'In N Out w/ Eunice', calendar: 'Food', color: 'orange', dates: '3/7' },
+    { eventName: 'Sushi Ki w/ Surahbi', calendar: 'Food', color: 'orange', dates: '3/9'  },
+    { eventName: 'Lucha Libre w/ Eason', calendar: 'Food', color: 'orange' , dates: '3/12' },
 
 
 
-    { eventName: 'Lunch Meeting w/ Mark', calendar: 'Work', color: 'blue' , date: '1' },
-    { eventName: 'Interview - Jr. Web Developer', calendar: 'Work', color: 'blue', date: '8'  },
-    { eventName: 'Demo New App to the Board', calendar: 'Work', color: 'blue', date: '10'  },
-    { eventName: 'Dinner w/ Marketing', calendar: 'Work', color: 'blue', date: '9'  },
+    { eventName: 'Lunch Meeting w/ Mark', calendar: 'Work', color: 'blue' , dates: '3/1' },
+    { eventName: 'Interview - Jr. Web Developer', calendar: 'Work', color: 'blue', dates: '3/8'  },
+    { eventName: 'Demo New App to the Board', calendar: 'Work', color: 'blue', dates: '3/10'  },
+    { eventName: 'Dinner w/ Marketing', calendar: 'Work', color: 'blue', dates: '3/9'  },
 
    
 
-    { eventName: 'School Play', calendar: 'Kids', color: 'yellow' , date: '5' },
-    { eventName: 'Parent/Teacher Conference', calendar: 'Kids', color: 'yellow', date: '13'  },
-    { eventName: 'Pick up from Soccer Practice', calendar: 'Kids', color: 'yellow' , date: '21' },
-    { eventName: 'Ice Cream Night', calendar: 'Kids', color: 'yellow' , date: '25' },
+    { eventName: 'School Play', calendar: 'Kids', color: 'yellow' , dates: '3/5' },
+    { eventName: 'Parent/Teacher Conference', calendar: 'Kids', color: 'yellow', dates: '3/13'  },
+    { eventName: 'Pick up from Soccer Practice', calendar: 'Kids', color: 'yellow' , dates: '3/21' },
+    { eventName: 'Ice Cream Night', calendar: 'Kids', color: 'yellow' , dates: '3/25' },
 
-    { eventName: 'Free Tamale Night', calendar: 'Other', color: 'green', date: '9'  },
-    { eventName: 'Bowling Team', calendar: 'Other', color: 'green', date: '16'  },
-    { eventName: 'Teach Kids to Code', calendar: 'Other', color: 'green' , date: '18' },
-    { eventName: 'Startup Weekend', calendar: 'Other', color: 'green', date: '22'  }
+    { eventName: 'Free Tamale Night', calendar: 'Other', color: 'green', dates: '3/9'  },
+    { eventName: 'Bowling Team', calendar: 'Other', color: 'green', dates: '3/16'  },
+    { eventName: 'Teach Kids to Code', calendar: 'Other', color: 'green' , dates: '3/18' },
+    { eventName: 'Startup Weekend', calendar: 'Other', color: 'green', dates: '3/22'  }
   ];
 
   
