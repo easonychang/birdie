@@ -55,7 +55,7 @@
     var self = this;
     
     this.events.forEach(function(ev) {
-     ev.date = self.current.clone().date(Math.random() * (29 - 1) + 1);
+     ev.date = self.current.clone().date(ev.date);
     });
     
     
@@ -321,25 +321,29 @@
 
 !function() {
   var data = [
-    { eventName: 'Lunch Meeting w/ Mark', calendar: 'Work', color: 'orange' },
-    { eventName: 'Interview - Jr. Web Developer', calendar: 'Work', color: 'orange' },
-    { eventName: 'Demo New App to the Board', calendar: 'Work', color: 'orange' },
-    { eventName: 'Dinner w/ Marketing', calendar: 'Work', color: 'orange' },
+    { eventName: 'Phuong Trang w/ Andy', calendar: 'Food', color: 'orange', date: '6' },
+    { eventName: 'In N Out w/ Eunice', calendar: 'Food', color: 'orange', date: '7' },
+    { eventName: 'Sushi Ki w/ Surahbi', calendar: 'Food', color: 'orange', date: '9'  },
+    { eventName: 'Lucha Libre w/ Eason', calendar: 'Food', color: 'orange' , date: '12' },
 
-    { eventName: 'Game vs Portalnd', calendar: 'Sports', color: 'blue' },
-    { eventName: 'Game vs Houston', calendar: 'Sports', color: 'blue' },
-    { eventName: 'Game vs Denver', calendar: 'Sports', color: 'blue' },
-    { eventName: 'Game vs San Degio', calendar: 'Sports', color: 'blue' },
 
-    { eventName: 'School Play', calendar: 'Kids', color: 'yellow' },
-    { eventName: 'Parent/Teacher Conference', calendar: 'Kids', color: 'yellow' },
-    { eventName: 'Pick up from Soccer Practice', calendar: 'Kids', color: 'yellow' },
-    { eventName: 'Ice Cream Night', calendar: 'Kids', color: 'yellow' },
 
-    { eventName: 'Free Tamale Night', calendar: 'Other', color: 'green' },
-    { eventName: 'Bowling Team', calendar: 'Other', color: 'green' },
-    { eventName: 'Teach Kids to Code', calendar: 'Other', color: 'green' },
-    { eventName: 'Startup Weekend', calendar: 'Other', color: 'green' }
+    { eventName: 'Lunch Meeting w/ Mark', calendar: 'Work', color: 'blue' , date: '1' },
+    { eventName: 'Interview - Jr. Web Developer', calendar: 'Work', color: 'blue', date: '8'  },
+    { eventName: 'Demo New App to the Board', calendar: 'Work', color: 'blue', date: '10'  },
+    { eventName: 'Dinner w/ Marketing', calendar: 'Work', color: 'blue', date: '9'  },
+
+   
+
+    { eventName: 'School Play', calendar: 'Kids', color: 'yellow' , date: '5' },
+    { eventName: 'Parent/Teacher Conference', calendar: 'Kids', color: 'yellow', date: '13'  },
+    { eventName: 'Pick up from Soccer Practice', calendar: 'Kids', color: 'yellow' , date: '21' },
+    { eventName: 'Ice Cream Night', calendar: 'Kids', color: 'yellow' , date: '25' },
+
+    { eventName: 'Free Tamale Night', calendar: 'Other', color: 'green', date: '9'  },
+    { eventName: 'Bowling Team', calendar: 'Other', color: 'green', date: '16'  },
+    { eventName: 'Teach Kids to Code', calendar: 'Other', color: 'green' , date: '18' },
+    { eventName: 'Startup Weekend', calendar: 'Other', color: 'green', date: '22'  }
   ];
 
   
