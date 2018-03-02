@@ -53,6 +53,6 @@ function sendEvent(){
     $.post('/scheduledEvent', {rest: restaurant, friend: friend}, callBack());
 
     function callBack(){
-        console.log("hey");
+        //console.log("hey");
     }
 }

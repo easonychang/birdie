@@ -353,7 +353,7 @@
 
   
 
-  function addDate() {
+  function addDate(addEvent) {
     var newEvent = {
       "eventName": 'EATING WITH MYSELF', 
       "calendar": 'Food', 
