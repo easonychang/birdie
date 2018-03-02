@@ -105,6 +105,14 @@ p, h1 {
 	margin: 30px;
 }
 
+.myButton{
+    color: #fff;
+}
+.myButton:hover{
+    color:#ffff00;
+    background:#000;
+    border:1px solid #fff;
+}
 
 .rest-card{
 	margin-top: 30px;

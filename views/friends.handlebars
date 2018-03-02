@@ -130,6 +130,18 @@
             </div>
         </div>
 
+        <!-- back button --> 
+        <div>
+            <form>
+                <button id="back_button" class="btn-primary" type="button" value="back />
+            </form>
+        </div>  
+
         <script src="https://code.jquery.com/jquery.js"></script>
+        <script type="text/javascript">
+            document.getElementById("back_button").onclick = function () {
+                location.href = localStorage.prevRecommended;
+            }
+        </script>
     </body>
 </html>
