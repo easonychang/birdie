@@ -34,7 +34,7 @@ function soloClick(){
 
     console.log(localStorage.facebookname)
 
-    console.log("before setting friend name: " +localStorage.friendame);
+    console.log("before setting friend name: " +localStorage.friendName);
 
     if(localStorage.loggedIn === "loggedIn"){
         localStorage.friendName = localStorage.facebookname;
@@ -53,7 +53,7 @@ function friendClick(e) {
     // prevent the page from reloading     
     e.preventDefault();
 
-	var friendname = $(this).closest(".mb-1").context.querySelector(".mb-1").textContent;
+	var friendname = $(this).closest(".friend-name").context.querySelector(".friend-name").textContent;
     console.log(friendname);
 
     localStorage.friendName = friendname;

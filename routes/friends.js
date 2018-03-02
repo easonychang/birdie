@@ -1,8 +1,12 @@
 
 /*
- * GET friends page.
+ * GET both friends pages.
  */
 
-exports.friendsView = function(req, res){
-  res.render('friends');
+exports.friendsAView = function(req, res){
+  res.render('friends_A');
+};
+
+exports.friendsBView = function(req, res){
+  res.render('friends_B');
 };

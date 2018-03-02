@@ -26,6 +26,6 @@ function initializePage() {
         $('.userphoto').hide();
     }
     
-	$('.mb-1').html("<h5>" + localStorage.friendName +"</h5>");
+	$('.friend-name').html("<h5>" + localStorage.friendName +"</h5>");
 	
 }
