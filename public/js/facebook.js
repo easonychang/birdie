@@ -15,8 +15,14 @@ function statusChangeCallback(response) {
     // Logged into your app and Facebook.
         console.log('Successfully logged in with Facebook');
         var accessToken = response.authResponse.user_friends;
+
+
+        //impossible to tests
+        FB.api('/me/friends', 'GET',{}, displayFriend);
+
+
         FB.api('/me?fields=name,first_name,picture.type(square)', changeUser);
-        FB.api('/me', 'GET',{},displayFriend);
+        
   }
 }
 
@@ -33,7 +39,7 @@ function changeUser(response){
 
 
 
-  console.log(response.friends);
+  
   
   window.location.replace("/home");
 
@@ -41,5 +47,5 @@ function changeUser(response){
 
 
 function displayFriend(response){
-
+  console.log(response);
 }
