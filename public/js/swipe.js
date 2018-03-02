@@ -40,7 +40,19 @@ $("#tinderslide").jTinder({
 		localStorage.restName = item.prevObject[total_item-total_count].querySelector(".card-title").textContent;
 		console.log(localStorage.restName);
 		
-		window.location.replace("/friends");
+
+		//randomize A/B testing
+		var rand = Math.floor(Math.random()*2);
+		console.log(rand);
+		if(rand === 0){
+			//original
+			window.location.replace("/friends_A");
+		}else{
+			//new design
+			window.location.replace("/friends_B");
+		}
+			
+			
 		
 		
 		/*if(item.index()==0){

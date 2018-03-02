@@ -359,7 +359,7 @@
       "calendar": 'Food', 
       "color": 'orange', 
       "dates": '3/6'
-    }
+    };
 
     data.push(newEvent);
   }

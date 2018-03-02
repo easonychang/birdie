@@ -4,9 +4,15 @@
  */
 
 exports.friendsAView = function(req, res){
-  res.render('friends_A');
+  var det = {
+    "viewAlt": false
+  };
+  res.render('friends_A', det);
 };
 
 exports.friendsBView = function(req, res){
-  res.render('friends_B');
+  var det = {
+    "viewAlt": true
+  };
+  res.render('friends_B', det);
 };

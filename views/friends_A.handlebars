@@ -90,6 +90,110 @@
                 <a id="solo-button" class="btn btn-secondary" href="/scheduled" role="button">Going solo</a>
             </div>
 
+
+        {{#if viewAlt}}
+
+            <!--Close friends-->
+            <div class="close-friends">
+                <h5 class="header">Close friends</h5>
+                <table style="width: 88%" align="center">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="/confirm">
+                                    <img src="/images/friends/addison-yee.jpg" class="friend"/><br>
+                                    <p>Addison Yee</p>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/confirm">
+                                    <img src="/images/friends/alex-kurland.jpg" class="friend"/>
+                                    <p>Alex Kurland</p>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/confirm">
+                                    <img src="/images/friends/tim-green.jpg" class="friend"/>
+                                    <p>Avery Jones</p>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="/confirm">
+                                    <img src="/images/friends/colin-winkle.jpg" class="friend"/>
+                                    <p>Colin Winkle</p>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/confirm">
+                                    <img src="/images/friends/jasmine-simmons.jpg" class="friend"/>
+                                    <p>Jasmine Simmons</p>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/confirm">
+                                    <img src="/images/friends/midsen-penna.jpg" class="friend"/>
+                                    <p>Midsen Penna</p>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!--Other friends-->
+            <div class="other-friends">
+                <h5 class="header">Friends</h5>
+                <table style="width: 88%" align="center">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="/confirm">
+                                    <img src="/images/friends/katie-archer.jpg" class="friend"/><br>
+                                    <p class="friend-name">Katie Archer</p>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/confirm">
+                                    <img src="/images/friends/uday-govindswamy.jpg" class="friend"/>
+                                    <p class="friend-name">Uday Govindswamy</p>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/confirm">
+                                    <img src="/images/friends/tim-green.jpg" class="friend"/>
+                                    <p class="friend-name">Eason Chang</p>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="/confirm">
+                                    <img src="/images/friends/alex-kurland.jpg" class="friend"/>
+                                    <p class="friend-name">Sue Smith</p>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/confirm">
+                                    <img src="/images/friends/addison-yee.jpg" class="friend"/>
+                                    <p class="friend-name">Lucy Taylor</p>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/confirm">
+                                    <img src="/images/friends/midsen-penna.jpg" class="friend"/>
+                                    <p class="friend-name">Midsen Penna</p>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+        {{else}}
             <!--Choose friends-->
             <div class="list-group">
                 <a href="/confirm" class="list-group-item list-group-item-action flex-column align-items-start">
@@ -129,6 +233,9 @@
                 </a>
             </div>
         </div>
+
+
+        {{/if}}
 
         <script src="https://code.jquery.com/jquery.js"></script>
     </body>
