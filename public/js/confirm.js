@@ -13,7 +13,7 @@ $(document).ready(function() {
  */
 function initializePage() {
 
-    console.log(localStorage.restName);
+    //console.log(localStorage.restName);
 
     
     $('.eatwith').html("<h5> You want to eat at " + localStorage.restName + " with </h2>");
@@ -26,6 +26,10 @@ function initializePage() {
         $('.userphoto').hide();
     }
     
-	$('.friend-name').html("<h5>" + localStorage.friendName +"</h5>");
+    console.log(localStorage.friendName);
+
+    
+    $('.mb-1').html("<h5>" + localStorage.friendName +"</h5>");
+	
 	
 }

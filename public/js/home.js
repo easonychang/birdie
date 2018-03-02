@@ -13,7 +13,7 @@ $(document).ready(function() {
  */
 function initializePage() {
 
-    console.log(localStorage.username);
+    //console.log(localStorage.username);
     var user = localStorage.username;
 
     console.log(localStorage.facebookname)
