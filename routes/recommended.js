@@ -73,6 +73,15 @@ function displayData(response){
         
     } 
 
+    var locationArr = response.jsonBody.location.display_address;
+    var address="";
+    
+    for (var index in locationArr){
+        address += locationArr[index]+" ";
+    }
+
+    //console.log(address);
+
     var display = {
         "name": response.jsonBody.name,
         "image_url": response.jsonBody.image_url,
@@ -81,6 +90,7 @@ function displayData(response){
         "rating": response.jsonBody.rating,
         "rating_img" : rating_image,
         "price": response.jsonBody.price,
+        "location": address,
 
     };
 
