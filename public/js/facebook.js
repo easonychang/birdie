@@ -15,7 +15,8 @@ function statusChangeCallback(response) {
     // Logged into your app and Facebook.
         console.log('Successfully logged in with Facebook');
         var accessToken = response.authResponse.user_friends;
-        FB.api('/me?fields=name,first_name,picture.type(square),friends', changeUser);
+        FB.api('/me?fields=name,first_name,picture.type(square)', changeUser);
+        FB.api('/me', 'GET',{},displayFriend);
   }
 }
 
@@ -24,14 +25,21 @@ function changeUser(response){
 		localStorage.facebookname = response.first_name;
     localStorage.picurl = response.picture.data.url;
     localStorage.loggedIn = "loggedIn";
-    localStorage.friends = response.friends;
+   
     
 	}else{
 		console.log("Your browser does not support web storage.");
   }
 
-  //console.log(response.friends);
+
+
+  console.log(response.friends);
   
   window.location.replace("/home");
+
+}
+
+
+function displayFriend(response){
 
 }
