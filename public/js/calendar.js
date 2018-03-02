@@ -335,19 +335,10 @@
 
 !function() {
   var data = [
-    { eventName: 'Phuong Trang w/ Andy', calendar: 'Food', color: 'orange', dates: '3/6' },
-    { eventName: 'In N Out w/ Eunice', calendar: 'Food', color: 'orange', dates: '3/7' },
-    { eventName: 'Sushi Ki w/ Surahbi', calendar: 'Food', color: 'orange', dates: '3/9'  },
-    { eventName: 'Lucha Libre w/ Eason', calendar: 'Food', color: 'orange' , dates: '3/12' },
-
-
-
     { eventName: 'Lunch Meeting w/ Mark', calendar: 'Work', color: 'blue' , dates: '3/1' },
     { eventName: 'Interview - Jr. Web Developer', calendar: 'Work', color: 'blue', dates: '3/8'  },
     { eventName: 'Demo New App to the Board', calendar: 'Work', color: 'blue', dates: '3/10'  },
     { eventName: 'Dinner w/ Marketing', calendar: 'Work', color: 'blue', dates: '3/9'  },
-
-   
 
     { eventName: 'School Play', calendar: 'Kids', color: 'yellow' , dates: '3/5' },
     { eventName: 'Parent/Teacher Conference', calendar: 'Kids', color: 'yellow', dates: '3/13'  },
@@ -362,10 +353,19 @@
 
   
 
-  function addDate(ev) {
-    
+  function addDate() {
+    var newEvent = {
+      "eventName": 'EATING WITH MYSELF', 
+      "calendar": 'Food', 
+      "color": 'orange', 
+      "dates": '3/6'
+    }
+
+    data.push(newEvent);
   }
 
+  addDate();
   var calendar = new Calendar('#calendar', data);
+
 
 }();

@@ -4,6 +4,5 @@
  */
 
 exports.friendsView = function(req, res){
-
   res.render('friends');
 };

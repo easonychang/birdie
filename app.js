@@ -55,6 +55,7 @@ app.get('/friends', friends.friendsView);
 app.get('/confirm', confirm.confirmView);
 app.get('/load', load.loadView);
 app.get('/scheduled', scheduled.scheduledView);
+app.post('/scheduledEvent', scheduled.addEvent);
 app.get('/calendar', calendar.calendarView);
 
 app.get('/temp',temp.tempView);
