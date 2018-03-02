@@ -134,13 +134,13 @@ exports.getRec = function (req,res){
 
         var index = Math.floor(Math.random()*cuisine.length);
 
-        console.log(cuisine[index]);
+        //console.log(cuisine[index]);
         
         searchValue = cuisine[index];
     }
 
 
-    console.log("searchVale is: " + searchValue);
+    //console.log("searchVale is: " + searchValue);
 
     const searchRequest = {
       term: searchValue,
