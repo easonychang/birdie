@@ -13,7 +13,8 @@ var handlebars = require('express3-handlebars')
 var home = require('./routes/home');
 var recommended = require('./routes/recommended');
 var login = require('./routes/login');
-var friends = require('./routes/friends');
+var friends_A = require('./routes/friends');
+var friends_B = require('./routes/friends');
 var confirm = require('./routes/confirm');
 var load = require('./routes/load');
 var scheduled = require('./routes/scheduled');
@@ -51,10 +52,12 @@ app.get('/', login.loginView);
 app.post('/login', login.loginPost);
 app.get('/recommended', recommended.recommendedView);
 app.get('/home', home.view);
-app.get('/friends', friends.friendsView);
+app.get('/friends_A', friends_A.friendsAView);
+app.get('/friends_B', friends_B.friendsBView);
 app.get('/confirm', confirm.confirmView);
 app.get('/load', load.loadView);
 app.get('/scheduled', scheduled.scheduledView);
+app.post('/scheduledEvent', scheduled.addEvent);
 app.get('/calendar', calendar.calendarView);
 
 app.get('/temp',temp.tempView);

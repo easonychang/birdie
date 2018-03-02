@@ -73,6 +73,15 @@ function displayData(response){
         
     } 
 
+    var locationArr = response.jsonBody.location.display_address;
+    var address="";
+    
+    for (var index in locationArr){
+        address += locationArr[index]+" ";
+    }
+
+    //console.log(address);
+
     var display = {
         "name": response.jsonBody.name,
         "image_url": response.jsonBody.image_url,
@@ -81,6 +90,7 @@ function displayData(response){
         "rating": response.jsonBody.rating,
         "rating_img" : rating_image,
         "price": response.jsonBody.price,
+        "location": address,
 
     };
 
@@ -124,13 +134,13 @@ exports.getRec = function (req,res){
 
         var index = Math.floor(Math.random()*cuisine.length);
 
-        console.log(cuisine[index]);
+        //console.log(cuisine[index]);
         
         searchValue = cuisine[index];
     }
 
 
-    console.log("searchVale is: " + searchValue);
+    //console.log("searchVale is: " + searchValue);
 
     const searchRequest = {
       term: searchValue,
