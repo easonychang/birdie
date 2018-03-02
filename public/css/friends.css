@@ -105,13 +105,11 @@ p, h1 {
 	margin: 30px;
 }
 
-.myButton{
-    color: #fff;
-}
-.myButton:hover{
-    color:#ffff00;
-    background:#000;
+#back_button{
     border:1px solid #fff;
+    position: absolute;
+    top:50%;
+    margin-left: -100px;
 }
 
 .rest-card{
