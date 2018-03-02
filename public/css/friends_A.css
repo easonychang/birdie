@@ -105,6 +105,12 @@ p, h1 {
 	margin: 30px;
 }
 
+#back_button{
+    border:1px solid #fff;
+    position: absolute;
+    top:50%;
+    margin-left: -100px;
+}
 
 .rest-card{
 	margin-top: 30px;
