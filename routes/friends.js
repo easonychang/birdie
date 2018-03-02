@@ -14,5 +14,5 @@ exports.friendsBView = function(req, res){
   var det = {
     "viewAlt": true
   };
-  res.render('friends_B', det);
+  res.render('friends_A', det);
 };

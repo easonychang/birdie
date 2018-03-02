@@ -32,9 +32,9 @@ function soloClick(){
 
     var user = localStorage.username;
 
-    console.log(localStorage.facebookname)
+    //console.log(localStorage.facebookname)
 
-    console.log("before setting friend name: " +localStorage.friendName);
+    //console.log("before setting friend name: " +localStorage.friendName);
 
     if(localStorage.loggedIn === "loggedIn"){
         localStorage.friendName = localStorage.facebookname;
