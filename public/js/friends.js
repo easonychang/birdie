@@ -24,8 +24,11 @@ function initializePage() {
         $('.userphoto').hide();
     }
     
-    $(".list-group a").click(friendClick);
-	
+    $(".list-group a").click(friendAClick);
+
+    $(".close-friends a").click(friendBClick);
+    $(".other-friends a").click(friendBClick);
+    
 }
 
 function soloClick(){
@@ -49,15 +52,31 @@ function soloClick(){
 }
 
 
-function friendClick(e) {
+function friendAClick(e) {
     // prevent the page from reloading     
     e.preventDefault();
 
-	var friendname = $(this).closest(".friend-name").context.querySelector(".friend-name").textContent;
+	
+    var friendname = $(this).closest(".mb-1").context.querySelector(".mb-1").textContent;
+
     console.log(friendname);
 
     localStorage.friendName = friendname;
 
+
+    window.location = $(this).attr("href");
+}
+
+function friendBClick(e) {
+    // prevent the page from reloading     
+    e.preventDefault();
+
+	//var friendname = $(this).closest(".friend-name").context.querySelector(".friend-name").textContent;
+    var friendname = $(this).closest(".friend-name").context.getElementsByTagName("P")[0].textContent;
+    console.log(friendname);
+
+    localStorage.friendName = friendname;
+    
 
     window.location = $(this).attr("href");
 }
