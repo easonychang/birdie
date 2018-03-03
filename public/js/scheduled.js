@@ -50,9 +50,12 @@ function sendEvent(){
     var friend = localStorage.friendName;
     console.log(restaurant);
     console.log(friend);
-    $.post('/scheduledEvent', {rest: restaurant, friend: friend}, callBack());
 
-    function callBack(){
-        //console.log("hey");
-    }
+    
+
+    $.post('/scheduledEvent', {rest: restaurant, friend: friend});
+
+    /*function callBack(){
+        alert("rest is:" + restaurant + "friend is:" + friend);
+    }*/
 }

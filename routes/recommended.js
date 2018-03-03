@@ -111,6 +111,7 @@ function displayData(response){
         }
     }
 
+
     if(!dataExist){
         displaydata.restaurant.push(display);
     }

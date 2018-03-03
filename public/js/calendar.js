@@ -1,3 +1,6 @@
+var newEventArray = [];
+
+
 !function() {
 
   var today = moment();
@@ -46,6 +49,8 @@
       this.header.appendChild(right);
       this.header.appendChild(left);
       this.el.appendChild(this.header);
+    
+      
     }
 
     this.title.innerHTML = this.current.format('MMMM YYYY');
@@ -333,9 +338,16 @@
   }
 }();
 
+
+
+
+
+
+
 !function() {
   var data = [
-    { eventName: 'Lunch Meeting w/ Mark', calendar: 'Work', color: 'blue' , dates: '3/1' },
+    { eventName: 'Eating with Myself', calendar: 'Food', color: 'orange' , dates: '3/1' },
+    
     { eventName: 'Interview - Jr. Web Developer', calendar: 'Work', color: 'blue', dates: '3/8'  },
     { eventName: 'Demo New App to the Board', calendar: 'Work', color: 'blue', dates: '3/10'  },
     { eventName: 'Dinner w/ Marketing', calendar: 'Work', color: 'blue', dates: '3/9'  },
@@ -351,21 +363,80 @@
     { eventName: 'Startup Weekend', calendar: 'Other', color: 'green', dates: '3/22'  }
   ];
 
+function addDate() {
+
+    
+
+  //alert("addDate called");
+
+    
+  $.get('/scheduledEvent', function(events) {
+    //console.log(events);
+    
+  
+    for(i =0; i < events.events.length; i++){
+      
+
+      var newEvent = {
+        "eventName": events.events[i].starttime + " at " + events.events[i].eventName + " with " + events.events[i].friend, 
+        "calendar": events.events[i].calendar, 
+        "color": events.events[i].color, 
+        "dates": events.events[i].dates
+      };
+
+
+      var dataExist;
+      for(var key in data){
+        if(data.hasOwnProperty(key)){
+            if(data[key].eventName === newEvent.eventName && 
+              data[key].calendar === newEvent.calendar &&
+              data[key].color === newEvent.color &&
+              data[key].dates === newEvent.dates){
+                dataExist = true;
+            }
+        }
+      }
+
+    
+
+      if(!dataExist){
+        newEventArray.push(newEvent);
+      }
+
+      
+    
+    }
+
+    //console.log(data);
+    //console.log(newEventArray);
+    
+    
+    for(var index in newEventArray){
+      //console.log("inside for loop");
+      //console.log(newEventArray[index]);
+      data.push(newEventArray[index]);
+    }
+    
+    
+    
+    
+    var calendar = new Calendar('#calendar', data);
+  });
+
+}  
   
 
-  function addDate(addEvent) {
-    var newEvent = {
-      "eventName": 'EATING WITH MYSELF', 
-      "calendar": 'Food', 
-      "color": 'orange', 
-      "dates": '3/6'
-    };
 
-    data.push(newEvent);
-  }
 
+
+
+
+  
+
+  
+  
   addDate();
-  var calendar = new Calendar('#calendar', data);
-
 
 }();
+
+
