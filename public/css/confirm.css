@@ -87,13 +87,11 @@ p, h1 {
     color: #A7DBD8;
 }
 
-.fas:hover {
-    color: #A7DBD8;
+
+.fa-times{
+    color: red;
 }
 
-.far:hover {
-    color: #A7DBD8;
-}
 
 .welcome{
 	margin: 30px;
@@ -109,6 +107,16 @@ p, h1 {
     width: 100%;
     text-align: center;
 }
+
+.form_datetime{
+    text-align: center;
+    
+}
+
+input[type="text"] { 
+    border: 0.5px solid gray 
+}
+
 
 
 /* Huge Monitor*/
