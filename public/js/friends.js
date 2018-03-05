@@ -48,6 +48,9 @@ function soloClick(){
         localStorage.friendName = "Yourself";
     }   
     console.log(localStorage.friendName);
+
+    ga("send", "event", 'solo', 'click');
+
     $.get('/scheduled');
 }
 
@@ -63,6 +66,7 @@ function friendAClick(e) {
 
     localStorage.friendName = friendname;
 
+    ga("send", "event", 'friendA', 'click');
 
     window.location = $(this).attr("href");
 }
@@ -77,6 +81,8 @@ function friendBClick(e) {
 
     localStorage.friendName = friendname;
     
+
+    ga("send", "event", 'friendB', 'click');
 
     window.location = $(this).attr("href");
 }

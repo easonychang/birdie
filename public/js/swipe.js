@@ -41,7 +41,7 @@ $("#tinderslide").jTinder({
 		console.log(localStorage.restName);
 		
 
-		//randomize A/B testing
+		/*//randomize A/B testing
 		var rand = Math.floor(Math.random()*2);
 		console.log(rand);
 		if(rand === 0){
@@ -50,8 +50,9 @@ $("#tinderslide").jTinder({
 		}else{
 			//new design
 			window.location.replace("/friends_B");
-		}
+		}*/
 			
+		window.location.replace("/friends_A");
 			
 		
 		
