@@ -14,3 +14,16 @@ b {
  	font-weight: 10;
  	font-size: 15px;
 }
+
+li {
+	list-style: none;
+}
+
+ul {
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+#submitBTn{
+	display: none;
+}
