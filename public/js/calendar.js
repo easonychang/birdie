@@ -1,4 +1,6 @@
-var newEventArray = [];
+
+
+var newEventArray = []; //global variable
 
 
 !function() {
@@ -172,8 +174,11 @@ var newEventArray = [];
   Calendar.prototype.drawEvents = function(day, element) {
     if(day.month() === this.current.month()) {
       var todaysEvents = this.events.reduce(function(memo, ev) {
-        if(ev.date.isSame(day, 'day')) {
-          memo.push(ev);
+        if(ev.date != undefined){
+
+          if(ev.date.isSame(day, 'day')) {
+            memo.push(ev);
+          }
         }
         return memo;
       }, []);
@@ -238,9 +243,12 @@ var newEventArray = [];
     }
 
     var todaysEvents = this.events.reduce(function(memo, ev) {
-      if(ev.date.isSame(day, 'day')) {
-        memo.push(ev);
+      if(ev.date!=undefined){
+        if(ev.date.isSame(day, 'day')) {
+          memo.push(ev);
+        }
       }
+      
       return memo;
     }, []);
 
@@ -363,26 +371,28 @@ var newEventArray = [];
     { eventName: 'Startup Weekend', calendar: 'Other', color: 'green', dates: '3/22'  }
   ];
 
+
+
 function addDate() {
 
     
 
   //alert("addDate called");
 
-    
+  //get data that was sent through scheduledEvent
   $.get('/scheduledEvent', function(events) {
     //console.log(events);
     
   
-    for(i =0; i < events.events.length; i++){
+    for(var i =0; i < events.events.length; i++){
       
-
       var newEvent = {
         "eventName": events.events[i].starttime + " at " + events.events[i].eventName + " with " + events.events[i].friend, 
         "calendar": events.events[i].calendar, 
         "color": events.events[i].color, 
         "dates": events.events[i].dates
       };
+
 
 
       var dataExist;
@@ -425,18 +435,55 @@ function addDate() {
 
 }  
   
-
-
-
-
-
-
-  
-
-  
-  
   addDate();
 
 }();
 
 
+
+// Call this function when the page loads (the "ready" event)
+$(document).ready(function() {
+  "use strict";
+	initializePage();
+})
+
+function initializePage() {
+    console.log("initialized");
+    //deleteItem();
+
+    resizeAllInputEvents();
+    
+}
+
+
+function deleteItem(){
+  $('#event').click(function(e){
+    console.log("deleting event");
+    e.preventDefault();
+    var infoText = ($(this)[0].innerText);
+    $.post('/unScheduleEvent', {text: infoText});
+
+  });
+  
+}
+
+function resizeAllInputEvents(){
+  var eventLength = document.getElementsByClassName('time').length;
+    for(var i = 0; i< eventLength; i++ ){
+      resizable(document.getElementsByClassName('time')[i],8);
+      resizable(document.getElementsByClassName('place')[i],8.3);
+      resizable(document.getElementsByClassName('name')[i],8.5);
+	  }
+}
+
+function resizable (el, factor) {
+  var int = Number(factor) || 7.7;
+  function resize() {
+    el.style.width = ((el.value.length+1) * int) + 'px';
+  }
+  var e = 'keyup,keypress,focus,blur,change'.split(',');
+  for (var i in e){
+    el.addEventListener(e[i],resize,false);
+  } 
+  resize();
+}

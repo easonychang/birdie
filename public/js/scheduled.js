@@ -62,6 +62,11 @@ function displayTime(){
     //console.log(timeInt);
     
     var hour;
+
+    if(timeInt === 12){
+        timeInt = 0;
+    }
+
     if(amPm === "AM"){
         hour = timeInt;
     }else if( amPm === "PM"){

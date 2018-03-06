@@ -60,6 +60,7 @@ app.get('/confirm', confirm.confirmView);
 app.get('/load', load.loadView);
 app.get('/scheduled', scheduled.scheduledView);
 app.all('/scheduledEvent', scheduled.addEvent);
+app.all('/unScheduleEvent', scheduled.deleteEvent);
 //app.post('/scheduledEvent', scheduled.addEvent);
 app.get('/calendar', calendar.calendarView);
 

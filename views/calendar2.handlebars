@@ -37,8 +37,31 @@
 		<h4 align="center"> Upcoming Birdie Events </h4>
 		
 		{{#each events}}
-		<p> <center><b>{{starttime}} <b> {{startday}}</b></b> at <b>{{place}}</b> with <b>{{friend}}</b></center></p>
+		<p> 
+		<form method="post" action="/unScheduleEvent">
+			
+			<b>
+				<input size="3" type="text" name="startday" value='{{startday}}' readonly>
+			</b>	
+			<b>	
+				<input class="time" type="text" name="starttime" value='{{starttime}}'  readonly>
+			</b> at 
+				
+			<b>
+				<input class="place" type="text" name="place" value='{{place}}' readonly>
+			</b> with 
+			
+			<b>
+				<input class="name" type="text" name="friend" value='{{friend}}'  readonly>
+					
+			</b>
+
+			<input type="submit" id="submitBtn" class="btn btn-danger" value="Delete"></input>
+			
+		</form>
+		</p>
 		<hr>
+
 		{{/each}}
 	</div>
 	</body>

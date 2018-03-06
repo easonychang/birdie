@@ -116,6 +116,7 @@ p, h1 {
     color: #454545;
 }
 
+/*
 .fa:hover {
     color: #A7DBD8;
 }
@@ -126,7 +127,7 @@ p, h1 {
 
 .far:hover {
     color: #A7DBD8;
-}
+}*/
 
 .welcome{
 	margin: 30px;
