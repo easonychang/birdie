@@ -24,9 +24,7 @@
         <script src='/js/bootstrap.min.js'></script>
         <script src='js/scheduled.js'></script>
 
-
-
-
+        <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800" rel="stylesheet">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -106,7 +104,7 @@
             </div>
             <br>
             <div class="confirm text-center">
-                <button type="button" class="btn btn-danger text-center" data-toggle="modal" data-target="#cancelMeeting">No</button>
+                <button type="button" class="btn btn-danger text-center" data-target="#cancelMeeting" onclick="goBack()">No</button>
 
                 <button id="confirmButton" type="submit" class="btn btn-success text-center" data-toggle="modal" data-target="#acceptMeeting">Yes</button>
                 <!--<a class="btn btn-success" href="/" role="button">Yes</a>-->
@@ -176,5 +174,10 @@
         </div>
 
         <script src="https://code.jquery.com/jquery.js"></script>
+        <script>
+            function goBack() {
+            window.history.back();
+            }
+        </script>
     </body>
 </html>

@@ -1,6 +1,7 @@
 html, body {
     padding-bottom: 30px;
     margin: 0;
+    font-family: 'Overpass', sans-serif;
 }
 
 #user {
@@ -15,6 +16,9 @@ html, body {
     width: 50px;
 }
 
+.list-group h5 {
+    font-weight: 600;
+}
 
 #padding {
     padding-top: 10px;

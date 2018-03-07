@@ -1,6 +1,7 @@
 html, body {
     padding-bottom: 30px;
     margin: 0;
+    font-family: 'Overpass', sans-serif;
 }
 
 #user {
