@@ -205,14 +205,14 @@ p, h1 {
     }
     .navbar-nav {
         float: none!important;
-        margin-top: 7.5px;
+        margin-top: 0px;
     }
     .navbar-nav>li {
         float: none;
     }
     .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 7px;
+        padding-bottom: 7px;
     }
     .collapse.in {
         display: block !important;
