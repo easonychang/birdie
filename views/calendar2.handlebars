@@ -70,42 +70,38 @@
 
                                     </td>
                                     <td>
-                                        <input type="submit" id="submitBtn" class="btn btn-danger" value="Delete"></input>
-                            </td>
-                        </tr>
-                </tbody>
-            </table>
+                                        <input type="submit" id="submitBtn" class="btn btn-danger" value="Delete">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </li>
+                <hr>
+                {{/each}}
 
+            </ul>
+        </div>
 
-        </form>
-    </li>
-<hr>
-{{/each}}
-
-</ul>
-</div>
-
-<script>
-    $("#submitBtn").hide();			
-    var s = Swiped.init({
-        query: '.eventlist li',
-        list: true,
-        right: 40,
-        onClose(){
-
+        <script>
             $("#submitBtn").hide();			
-        },
-        onOpen(){
-            $("#submitBtn").show();
-            //$("#submitBtn").css("position","absolute");
+            var s = Swiped.init({
+                query: '.eventlist li',
+                list: true,
+                right: 40,
+                onClose(){
 
-        }
+                    $("#submitBtn").hide();			
+                },
+                onOpen(){
+                    $("#submitBtn").show();
+                    //$("#submitBtn").css("position","absolute");
 
-    });
+                }
+
+            });
 
 
-</script>
-
-
-</body>
+        </script>
+    </body>
 </html>
