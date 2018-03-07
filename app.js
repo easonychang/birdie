@@ -21,6 +21,7 @@ var scheduled = require('./routes/scheduled');
 var calendar = require('./routes/calendar');
 var calendar2 = require('./routes/calendar2');
 var profile = require('./routes/profile');
+var info = require('./routes/info');
 
 var temp = require('./routes/temp');
 
@@ -71,6 +72,7 @@ app.get('/getRecommended/:cuisine', recommended.getRec);
 app.get('/profile', profile.profileView);
 
 app.get('/calendar2', calendar2.calendarrView);
+app.get('/info', info.infoView);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
