@@ -199,4 +199,12 @@ p, h1 {
 
 }
 
+#googleMaps {
+    height: 400px;
+}
+
+#map {
+    height: 90%;
+}
+
 
