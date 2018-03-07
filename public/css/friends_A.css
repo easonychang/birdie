@@ -118,6 +118,11 @@ p, h1 {
     margin-left: -100px;
 }
 
+#backButton{
+    left: 50%;
+    justify-content: center;
+}
+
 .rest-card{
 	margin-top: 30px;
     padding-bottom: 30px;
