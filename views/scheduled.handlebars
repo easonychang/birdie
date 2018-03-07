@@ -23,9 +23,9 @@
         <!-- JS -->
         <script src='/js/bootstrap.min.js'></script>
         <script src='js/scheduled.js'></script>
-       
-        
-        
+
+
+
 
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -73,9 +73,11 @@
             <div class="container-fluid">
 
                 <ul class="nav navbar-nav">
-                    <li><a href="/profile"><i class="fas fa-user-circle" aria-hidden='true'></i></a></li>
-                    <li><a href="/home"><i class='fas fa-home' aria-hidden='true'></i></a></li>
-                    <li><a href="/calendar2"><i class="far fa-calendar-alt"></i></a></li>
+                    <li><a href="/profile"><img src="/images/avatar.png" class="profile"></a></li>
+                    <li><div style="width: 50px">&nbsp;</div></li>
+                    <li><a href="/home"><img src="/images/birdhouse.png"></a></li>
+                    <li><div style="width: 50px">&nbsp;</div></li>
+                    <li><a href="/calendar2"><img src="/images/calendar.png"></a></li>
                 </ul>
             </div>
         </nav>
@@ -105,7 +107,7 @@
             <br>
             <div class="confirm text-center">
                 <button type="button" class="btn btn-danger text-center" data-toggle="modal" data-target="#cancelMeeting">No</button>
-                
+
                 <button id="confirmButton" type="submit" class="btn btn-success text-center" data-toggle="modal" data-target="#acceptMeeting">Yes</button>
                 <!--<a class="btn btn-success" href="/" role="button">Yes</a>-->
             </div>
@@ -154,7 +156,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="modal fade" id="acceptMeeting" tabindex="-1" role="dialog" aria-labelledby="acceptMeetingLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">

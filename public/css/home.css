@@ -69,6 +69,11 @@ p, h1 {
     box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
 }
 
+.navbar img {
+    width: 23px;
+    height: auto;
+}
+
 .navbar .navbar-nav {
     display: inline-block;
     float: none;
@@ -198,14 +203,14 @@ p, h1 {
     }
     .navbar-nav {
         float: none!important;
-        margin-top: 7.5px;
+        margin-top: 0px;
     }
     .navbar-nav>li {
         float: none;
     }
     .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 7px;
+        padding-bottom: 7px;
     }
     .collapse.in {
         display: block !important;

@@ -383,3 +383,7 @@ body {
   to { opacity: 0; padding: 0px; height: 0px; }
 }
 
+.navbar img {
+    width: 23px;
+    height: auto;
+}
