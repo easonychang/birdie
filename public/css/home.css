@@ -55,6 +55,8 @@ html, body {
 #foodname {
     color: #454545;
     text-decoration: none;
+    font-family: 'Numans', sans-serif;
+    font-size: 20px;
 }
 
 p, h1 {
@@ -136,8 +138,16 @@ p, h1 {
 
 .welcome{
 	margin: 30px;
+    font-family: 'Numans', sans-serif;
 }
 
+.welcome h2 {
+    font-weight: 600;
+}
+
+.welcome h5 {
+    font-size: 18px;
+}
 
 .rest-card{
 	margin-top: 30px;

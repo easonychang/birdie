@@ -44,6 +44,15 @@ html, body {
     width: 100%;
 }
 
+.custom-select {
+    position: fixed;
+    width: 39%;
+    padding: 5px 0px;
+    border-color: #d7d7d7;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
 .info-left {
     float: left;
     width: 50%;
@@ -52,14 +61,6 @@ html, body {
 .info-right {
     float: right;
     width: 50%;
-}
-
-.dropdown-menu {
-    text-align: right;
-}
-
-#dropdownMenuButton {
-    text-align: right;
 }
 
 .username {
