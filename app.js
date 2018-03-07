@@ -68,6 +68,9 @@ app.get('/calendar', calendar.calendarView);
 app.get('/temp',temp.tempView);
 
 app.get('/recommended/:cuisine', recommended.recommendedView);
+
+app.get('/info/:restaurant', info.getRec);
+
 app.get('/getRecommended/:cuisine', recommended.getRec);
 app.get('/profile', profile.profileView);
 
