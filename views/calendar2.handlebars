@@ -1,102 +1,107 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=0.9">
-	<link rel="stylesheet" href="css/calendar2.css">
-	<link rel="stylesheet" href="css/events.css">
-	<link href="/css/home.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <link rel="stylesheet" href="css/calendar2.css">
+        <link rel="stylesheet" href="css/events.css">
+        <link href="/css/home.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-	
-	<!-- jQuery -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-	<!-- Bootstrap -->
-	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 
-	
-	<!-- Font Awesome -->
-	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-	<script src='/js/bootstrap.min.js'></script>  
-	<script src="/js/swipeEvent.js"></script>
-</head>
+        <!-- jQuery -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 
 
-<body>
-	<div id="calendar"></div>
-	
-	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
-	<script src="/js/calendar.js"></script>
-	<nav class="navbar navbar-fixed-bottom nav2">
-		<div class="container-fluid">
 
-			<ul class="nav navbar-nav">
-				<li><a href="/profile"><i class="fas fa-user-circle" aria-hidden='true'></i></a></li>
-				<li><a href="/home"><i class='fas fa-home' aria-hidden='true'></i></a></li>
-				<li><a href="/calendar2"><i class="far fa-calendar-alt"></i></a></li>
-			</ul>
-		</div>
-	</nav>
-	<br>
-	
-	<div align="center" id="event_box">
-		<h4 align="center"> Upcoming Birdie Events </h4>
-	
-		<ul class="eventlist">
+        <!-- Font Awesome -->
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        <script src='/js/bootstrap.min.js'></script>  
+        <script src="/js/swipeEvent.js"></script>
+    </head>
+    <body>
+        <div id="calendar"></div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+        <script src="/js/calendar.js"></script>
+        <nav class="navbar navbar-fixed-bottom nav2">
+            <div class="container-fluid">
 
-		{{#each events}}
-		<li> 
-			<form method="post" action="/unScheduleEvent">
-				
-				<b>
-					<input size="3" type="text" name="startday" value='{{startday}}' readonly>
-				</b>	
-				<b>	
-					<input class="time" type="text" name="starttime" value='{{starttime}}'  readonly>
-				</b> at 
-					
-				<b>
-					<input class="place" type="text" name="place" value='{{place}}' readonly>
-				</b> with 
-				
-				<b>
-					<input class="name" type="text" name="friend" value='{{friend}}'  readonly>
-						
-				</b>
+                <ul class="nav navbar-nav">
+                    <li><a href="/profile"><img src="/images/avatar.png" class="profile"></a></li>
+                    <li><div style="width: 50px">&nbsp;</div></li>
+                    <li><a href="/home"><img src="/images/birdhouse.png"></a></li>
+                    <li><div style="width: 50px">&nbsp;</div></li>
+                    <li><a href="/calendar2"><img src="/images/calendar.png"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <div align="center" id="event_box">
+            <h4 align="center"> Upcoming Birdie Events </h4>
 
-				<input type="submit" id="submitBtn" class="btn btn-danger" value="Delete"></input>
-				
-			</form>
-		</li>
-		<hr>
-		{{/each}}
+            <ul class="eventlist">
 
-		</ul>
-	</div>
+                {{#each events}}
+                <li> 
+                    <form method="post" action="/unScheduleEvent">
+                        <table width="100%">
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: center">
+                                        <b>
+                                            <input size="3" type="text" name="startday" value='{{startday}}' readonly>
+                                        </b>	
+                                        <b>	
+                                            <input class="time" type="text" name="starttime" value='{{starttime}}'  readonly>
+                                        </b> at 
 
-	<script>
-		$(".btn").hide();			
-		var s = Swiped.init({
-			query: '.eventlist li',
-			list: true,
-			right: 40,
-			onClose(){
+                                        <b>
+                                            <input class="place" type="text" name="place" value='{{place}}' readonly>
+                                        </b> with 
 
-				$($(this.elem.firstElementChild[4])).hide();			
-			},
-			onOpen(){
-				$($(this.elem.firstElementChild[4])).show();
-				//$($(this.elem.firstElementChild[4])).css("position","absolute");
+                                        <b>
+                                            <input class="name" type="text" name="friend" value='{{friend}}'  readonly>
 
-			}
+                                        </b>
 
-		});
+                                    </td>
+                                    <td>
+                                        <input type="submit" id="submitBtn" class="btn btn-danger" value="Delete">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </li>
+                <hr>
+                {{/each}}
 
-		
-	</script>
+            </ul>
+        </div>
+
+        <script>
+            $("#submitBtn").hide();			
+            var s = Swiped.init({
+                query: '.eventlist li',
+                list: true,
+                right: 40,
+                onClose(){
+
+                    $("#submitBtn").hide();			
+                },
+                onOpen(){
+                    $("#submitBtn").show();
+                    //$("#submitBtn").css("position","absolute");
+
+                }
+
+            });
 
 
-</body>
+        </script>
+    </body>
 </html>
