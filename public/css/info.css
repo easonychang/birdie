@@ -1,7 +1,8 @@
 html, body {
     padding-bottom: 30px;
+    height: 600px;
     font-family: 'Overpass', sans-serif;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 

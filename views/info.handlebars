@@ -90,14 +90,14 @@
             <img class="card-img-top" src={{image_url}} alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title text-center">{{name}}</h5>
+                <hr>
                 <p class="card-text">
                     {{categories}}
                     <span style="color: #51c52e">{{price}}</span><br>
                     <img src={{rating_img}}> {{review_count}} Reviews<br><br>
-                    11:00 AM - Midnight<br>
-
-                    {{location}}<br>
                     <input id="location" type="hidden" name="location" value="{{location}}" />
+                    11:00 AM - Midnight<br><hr>
+                    
 
                 </p>
                 {{/each}}
@@ -118,11 +118,10 @@
                       zoom: 11,
                       center: latlng,
                     mapTypeControl: true,
-                    mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
                     navigationControl: true,
                       mapTypeId: google.maps.MapTypeId.ROADMAP
                     };
-                    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+                    map = new google.maps.Map(document.getElementById("map"), myOptions);
                     if (geocoder) {
                       geocoder.geocode( { 'address': address}, function(results, status) {
                         if (status == google.maps.GeocoderStatus.OK) {
@@ -153,17 +152,17 @@
                     }
                   }
                 </script>
-
-                <body style="margin:0px; padding:0px;" onload="initialize()">
-                    <div id="map_canvas" style="width:100%; height: 300px;">
+                
+               
+                <body style="margin:0px; padding:0px;, overflow: auto" onload="initialize()">
+                    <div id="map" style="width:100%; height: 300px;">
                 </body>
                 <br>
                 <a href="#" class="btn btn-danger btn-sm" onclick="goBack()">Back</a>
                 <br>
                 </head>
             </div>
-        </div>
-        
+        </div>  
 	</div>
 	<script src="https://code.jquery.com/jquery.js"></script>
 
