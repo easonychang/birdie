@@ -34,6 +34,9 @@
         <!-- JS -->
         <script src='/js/bootstrap.min.js'></script>
         <script src='/js/profile.js'></script>
+        
+        <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800" rel="stylesheet">
+        
     </head>
 
     <body>
@@ -174,9 +177,15 @@
 
         <br>
         <div class="confirm text-center">
-            <a class="btn btn-danger" href="#" role="button">Back</a>
+            <a class="btn btn-danger" href="#" role="button" onclick="goBack()">Back</a>
             <a class="btn btn-success" href="#" role="button">Save</a>
         </div>
+        
+        <script>
+            function goBack() {
+            window.history.back();
+            }
+        </script>
 
     </body>
 </html>
