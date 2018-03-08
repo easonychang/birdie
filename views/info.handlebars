@@ -20,6 +20,7 @@
 
 	<!-- JS -->
 	<script src='/js/bootstrap.min.js'></script>
+	<!--<script src='/js/info.js'></script>-->
 	
 	<link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800" rel="stylesheet">
 
@@ -95,12 +96,8 @@
                     <span style="color: #51c52e">{{price}}</span><br>
                     <img src={{rating_img}}> {{review_count}} Reviews<br><br>
                     <input id="location" type="hidden" name="location" value="{{location}}" />
-                    11:00 AM - Midnight
+                    11:00 AM - Midnight<br>
                     
-                    <br>
-                    
-                    <a href="https://www.google.com/maps/search/?api=1&query={{location}}">{{location}}</a>
-
 
                 </p>
                 {{/each}}
@@ -114,14 +111,6 @@
                   var geocoder;
                   var map;
                   var address = $("#location").val();
-
-                  //insert address here!
-                  //console.log("wtf");
-                 //console.log(displaydata.restaurant.location);
-                  var address ="UCSD";
-
-
-
                   function initialize() {
                     geocoder = new google.maps.Geocoder();
                     var latlng = new google.maps.LatLng(-34.397, 150.644);
