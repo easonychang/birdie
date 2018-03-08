@@ -69,20 +69,24 @@
                             <tbody>
                                 <tr>
                                     <td style="text-align: center">
+                                        <br>
+                                        <p><b>{{startday}} {{starttime}}</b> at <b> <a href="/info/{{place}}">{{place}}</a> </b><br> with <b>{{friend}}</b></p>
                                         <b>
-                                            <input size="3" type="text" name="startday" value='{{startday}}' readonly>
+                                            <input size="3" type="hidden" type="text" name="startday" value='{{startday}}' readonly>
+
                                         </b>	
                                         <b>	
-                                            <input class="time" type="text" name="starttime" value='{{starttime}}'  readonly>
-                                        </b> at 
+                                            <input class="time" type="hidden" type="text" name="starttime" value='{{starttime}}'  readonly>
+                                        </b>
 
                                         <b>
-                                            <a href="/info/{{place}}"><input class="place" type="text" name="place" value='{{place}}' readonly></a>
+                                            
+                                            <a href="/info/{{place}}"><input class="place" type="hidden" type="text" name="place" value='{{place}}' readonly></a>
                                         </b> 
-                                        <br>with 
+                                        <br> 
 
                                         <b>
-                                            <input class="name" type="text" name="friend" value='{{friend}}'  readonly>
+                                            <input class="name" type="hidden" type="text" name="friend" value='{{friend}}'  readonly>
 
                                         </b>
 
