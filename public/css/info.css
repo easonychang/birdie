@@ -1,7 +1,7 @@
 html, body {
     padding-bottom: 30px;
     font-family: 'Overpass', sans-serif;
-    overflow: scroll;
+    overflow: auto;
 }
 
 
