@@ -86,18 +86,19 @@
 	<div class="container-fluid" align="center">
 
         <div class="card text-center" style="width: 90%" align="center">
-            <img class="card-img-top" src="/images/food/korean/kor1.jpg" alt="Card image cap">
+            {{#each restaurant}}
+            <img class="card-img-top" src={{image_url}} alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title text-center">Friend's House</h5>
+                <h5 class="card-title text-center">{{name}}</h5>
                 <p class="card-text">
                     Korean <br>
-                    <span style="color: #51c52e">$$</span><br>
-                    (star images here) 711 Reviews<br>
+                    <span style="color: #51c52e">{{price}}</span><br>
+                    <img src={{rating_img}}> {{review_count}} Reviews<br>
                     11:00 AM - Midnight<br>
                     0.6 mi<br><br>
-                    4647 Convoy St<br>
-                    San Diego, CA 92111
+                    {{location}}<br>
                 </p>
+                {{/each}}
                 <br>
 
                 <!-- google maps -->
@@ -110,7 +111,9 @@
                   var map;
 
                   //insert address here!
-                  var address ="20896 serrano creek rd";
+                  //console.log("wtf");
+                 //console.log(res.restaurant.location);
+                  var address ="UCSD";
 
 
 
