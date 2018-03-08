@@ -63,11 +63,6 @@ function displayData(response){
         "location": address,
     };
 
-    var LocalStorage = require('node-localstorage').LocalStorage,
-	localStorage = new LocalStorage('./scratch');
-
-    localStorage.setItem("location", display.location);
-
 
      displaydata.restaurant.push(display);
 
