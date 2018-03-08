@@ -1,6 +1,6 @@
 html, body {
-    padding-bottom: 40px;
-    height: 600px;
+    padding-bottom: 30px;
+    height: 580px;
     font-family: 'Overpass', sans-serif;
     overflow-y: auto;
 }
