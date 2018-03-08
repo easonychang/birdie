@@ -97,6 +97,7 @@
                     11:00 AM - Midnight<br>
 
                     {{location}}<br>
+                    <input id="location" type="hidden" name="location" value="{{location}}" />
 
                 </p>
                 {{/each}}
@@ -109,15 +110,7 @@
 
                   var geocoder;
                   var map;
-
-                  //insert address here!
-                  //console.log("wtf");
-                 //console.log(displaydata.restaurant.location);
-
-                  var address ="UCSD";
-
-
-
+                  var address = $("#location").val();
                   function initialize() {
                     geocoder = new google.maps.Geocoder();
                     var latlng = new google.maps.LatLng(-34.397, 150.644);

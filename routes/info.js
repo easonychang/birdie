@@ -7,7 +7,6 @@ var displaydata = require('../displaydata.json');
  */
 
 exports.infoView = function(req, res){
-	console.log("not calling");
   	res.render('info');
 };
 
@@ -64,6 +63,11 @@ function displayData(response){
         "location": address,
     };
 
+    var LocalStorage = require('node-localstorage').LocalStorage,
+	localStorage = new LocalStorage('./scratch');
+
+    localStorage.setItem("location", display.location);
+
 
      displaydata.restaurant.push(display);
 
@@ -78,6 +82,8 @@ exports.getRec = function (req,res){
       term: searchValue,
       location: 'san diego, ca'
     };
+
+
 
     const client = yelp.client(apiKey);
 
