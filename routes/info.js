@@ -107,13 +107,13 @@ exports.getRec = function (req,res){
         const result = response.jsonBody.businesses;
         //res.render('info', result);
         client.business(result[0].id).then(response => {
-                            displayData(response);
-                            res.render('info', displaydata);
-                            //res.json(displaydata);
+            displayData(response);
+            res.render('info', displaydata);
+            //res.json(displaydata);
 
-                        }).catch(e => {
-                            console.log(e);
-                        }); //result[0] end 
+        }).catch(e => {
+            console.log(e);
+        }); //result[0] end 
   });
 }
 
