@@ -15,12 +15,28 @@
         <!-- Font Awesome -->
         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
+
+        <!-- Google Analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-115069334-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <!-- End Google Analytics -->
+
         <!-- CSS -->
         <link href ="/css/profile.css" rel="stylesheet">
 
         <!-- JS -->
         <script src='/js/bootstrap.min.js'></script>
         <script src='/js/profile.js'></script>
+        
+        <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800" rel="stylesheet">
+        
     </head>
 
     <body>
@@ -65,9 +81,9 @@
                 </div>
 
                 <div class="info-right">
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3 favfoo">
                         <select class="custom-select" id="inputGroupSelect01">
-                            <option selected>Choose...</option>
+                            <option value="0" selected>Choose...</option>
                             <option value="1">American</option>
                             <option value="2">Chinese</option>
                             <option value="3">Ethiopian</option>
@@ -90,9 +106,9 @@
                         </select>
                     </div>
                     <div style="height: 53px">&nbsp;</div>
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3 disfood">
                         <select class="custom-select" id="inputGroupSelect01">
-                            <option selected>Choose...</option>
+                            <option value="0" selected>Choose...</option>
                             <option value="1">American</option>
                             <option value="2">Chinese</option>
                             <option value="3">Ethiopian</option>
@@ -115,44 +131,44 @@
                         </select>
                     </div>
                     <div style="height: 53px">&nbsp;</div>
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3 allergy">
                         <select class="custom-select" id="inputGroupSelect01">
-                            <option selected>Choose...</option>
+                            <option value="0" selected>Choose...</option>
                             <option value="1">None</option>
-                            <option value="3">Bean sprouts</option>
-                            <option value="2">Eggs</option>
-                            <option value="3">Fish</option>
-                            <option value="3">Milk</option>
-                            <option value="3">Peanuts</option>
-                            <option value="3">Shellfish</option>
-                            <option value="3">Soy</option>
-                            <option value="3">Strawberries</option>
-                            <option value="3">Tree nuts</option>
-                            <option value="3">Wheat</option>
+                            <option value="2">Bean sprouts</option>
+                            <option value="3">Eggs</option>
+                            <option value="4">Fish</option>
+                            <option value="5">Milk</option>
+                            <option value="6">Peanuts</option>
+                            <option value="7">Shellfish</option>
+                            <option value="8">Soy</option>
+                            <option value="9">Strawberries</option>
+                            <option value="10">Tree nuts</option>
+                            <option value="11">Wheat</option>
                         </select>
                     </div>
                     <div style="height: 53px">&nbsp;</div>
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3 drive">
                         <select class="custom-select" id="inputGroupSelect01">
-                            <option selected>Choose...</option>
+                            <option value="0" selected>Choose...</option>
                             <option value="1">No</option>
-                            <option value="3">Yes</option>
+                            <option value="2">Yes</option>
                         </select>
                     </div>
                     <div style="height: 53px">&nbsp;</div>
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3 budget">
                         <select class="custom-select" id="inputGroupSelect01">
-                            <option selected>Choose...</option>
+                            <option value="0" selected>Choose...</option>
                             <option value="1">Up to $10</option>
-                            <option value="1">Up to $20</option>
-                            <option value="1">Up to $30</option>
-                            <option value="1">Up to $40</option>
-                            <option value="1">Up to $50</option>
-                            <option value="1">Up to $60</option>
-                            <option value="1">Up to $70</option>
-                            <option value="1">Up to $80</option>
-                            <option value="1">Up to $90</option>
-                            <option value="1">Up to $100</option>
+                            <option value="2">Up to $20</option>
+                            <option value="3">Up to $30</option>
+                            <option value="4">Up to $40</option>
+                            <option value="5">Up to $50</option>
+                            <option value="6">Up to $60</option>
+                            <option value="7">Up to $70</option>
+                            <option value="8">Up to $80</option>
+                            <option value="9">Up to $90</option>
+                            <option value="10">Up to $100</option>
                         </select>
                     </div>
                 </div>
@@ -161,9 +177,15 @@
 
         <br>
         <div class="confirm text-center">
-            <a class="btn btn-danger" href="#" role="button">Back</a>
+            <a class="btn btn-danger" href="#" role="button" onclick="goBack()">Back</a>
             <a class="btn btn-success" href="#" role="button">Save</a>
         </div>
+        
+        <script>
+            function goBack() {
+            window.history.back();
+            }
+        </script>
 
     </body>
 </html>

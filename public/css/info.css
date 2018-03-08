@@ -1,8 +1,10 @@
 html, body {
     padding-bottom: 30px;
-    margin: 0;
+    height: 580px;
     font-family: 'Overpass', sans-serif;
+    overflow-y: auto;
 }
+
 
 #user {
     margin: auto;
@@ -11,53 +13,45 @@ html, body {
     height: auto;
 }
 
-.userphoto{
-    border-radius: 50%;
-    width: 50px;
+.card {
+    background-color: #f9f9f9;
+    border-color: #e5e5e5;
+    margin-top: 5%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
 }
 
-.friend {
-    width: 80%;
-    height: auto;
-    border-radius: 50%;
+.card-img-top{
+    width:100%;
+    height: 230px;
+    padding: 5%;
+    border-radius: 23px;
 }
 
-img {
-    margin-bottom: 5px;
+.card-title {
+    font-weight: 700;
 }
 
-table {
-    text-align: center;
-    font-size: 15px;
-}
-
-td {
-    padding-bottom: 30px;
-    width: 29%;
-}
-
-a {
+#foodname {
     color: #454545;
-}
-
-.header {
-    padding-left: 30px;
-    padding-bottom: 10px;
-}
-
-#padding {
-    padding-top: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 p, h1 {
     margin: 0;
 }
 
-.friendName {
-    color: #454545;
-    text-decoration: none;
-    display: inline;
+.btn {
+    margin-bottom: 20px;
 }
+
+.btn-secondary {
+    width: 100%;
+    text-align: center;
+}
+
+/* Navbar*/
 
 .navbar {
     margin-bottom: 0 !important;
@@ -65,6 +59,11 @@ p, h1 {
     background-color: #fff;
     border: 0px;
     box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar img {
+    width: 23px;
+    height: auto;
 }
 
 .navbar .navbar-nav {
@@ -114,10 +113,7 @@ p, h1 {
     color: #454545;
 }
 
-.fas {
-    display: inline;
-}
-
+/*
 .fa:hover {
     color: #A7DBD8;
 }
@@ -128,32 +124,8 @@ p, h1 {
 
 .far:hover {
     color: #A7DBD8;
-}
+}*/
 
-.welcome{
-	margin: 30px;
-}
-
-
-.rest-card{
-	margin-top: 30px;
-    padding-bottom: 30px;
-}
-
-.btn-outline-secondary {
-    width: 100%;
-    text-align: center;
-}
-
-.list-group.active:hover {
-    background-color: #000000;
-    color: #000;
-}
-
-.btn-secondary {
-    width: 100%;
-    text-align: center;
-}
 
 /* Huge Monitor*/
 
@@ -228,3 +200,13 @@ p, h1 {
     }
 
 }
+
+#googleMaps {
+    height: 400px;
+}
+
+#map {
+    height: 90%;
+}
+
+

@@ -5,15 +5,15 @@
         <!-- Google Analytics Content Experiment code -->
         <script>function utmx_section(){}function utmx(){}(function(){var
             k='170816094-0',d=document,l=d.location,c=d.cookie;
-                                                                      if(l.search.indexOf('utm_expid='+k)>0)return;
-                                                                      function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-                                                                      indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-                                                                                                               length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-                                                                          '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-                                                                                                     '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-                                                                          '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-                                                                          valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-                                                                          '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+            if(l.search.indexOf('utm_expid='+k)>0)return;
+            function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+            indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+                                                    length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+                '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+                                            '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+                '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+                valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+                '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
         </script><script>utmx('url','A/B');</script>
         <!-- End of Google Analytics Content Experiment code -->
 
@@ -56,7 +56,7 @@
         <!-- JS -->
         <script src='/js/bootstrap.min.js'></script>
 
-
+        <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800" rel="stylesheet">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -280,15 +280,17 @@
                 </a>
             </div>
         </div>
-
+        <br>
 
         {{/if}}
         <script src="https://code.jquery.com/jquery.js"></script>
-                <a class="btn btn-danger" href="#" id="backButton" role="button" style="width: 88%">Never mind!</a>
+                <center><a class="btn btn-danger" href="#" id="backButton" role="button" style="width: 88%" >Never mind!</a></center>
                 <script type="text/javascript">
                 document.getElementById("backButton").onclick = function () {
                 location.href = localStorage.prevRecommended;
                 }
                 </script>
+
+                <br>
     </body>
 </html>

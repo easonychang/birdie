@@ -10,18 +10,35 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 
+
+
         <!-- jQuery -->
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+        
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 
+        <!-- Google Analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+            ga('create', 'UA-115069334-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <!-- End Google Analytics -->
 
         <!-- Font Awesome -->
         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        
         <script src='/js/bootstrap.min.js'></script>  
         <script src="/js/swipeEvent.js"></script>
+        
+        <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800" rel="stylesheet">
+        
     </head>
     <body>
         <div id="calendar"></div>
@@ -40,9 +57,9 @@
             </div>
         </nav>
         <br>
-        <div align="center" id="event_box">
+        <div class="upcoming" align="center" id="event_box">
             <h4 align="center"> Upcoming Birdie Events </h4>
-
+            <font size="0">(swipe left to delete events)</font>
             <ul class="eventlist">
 
                 {{#each events}}
@@ -52,19 +69,24 @@
                             <tbody>
                                 <tr>
                                     <td style="text-align: center">
+                                        <br>
+                                        <p><b>{{startday}} {{starttime}}</b> at <b> <a href="/info/{{place}}">{{place}}</a> </b><br> with <b>{{friend}}</b></p>
                                         <b>
-                                            <input size="3" type="text" name="startday" value='{{startday}}' readonly>
+                                            <input size="3" type="hidden" type="text" name="startday" value='{{startday}}' readonly>
+
                                         </b>	
                                         <b>	
-                                            <input class="time" type="text" name="starttime" value='{{starttime}}'  readonly>
-                                        </b> at 
+                                            <input class="time" type="hidden" type="text" name="starttime" value='{{starttime}}'  readonly>
+                                        </b>
 
                                         <b>
-                                            <input class="place" type="text" name="place" value='{{place}}' readonly>
-                                        </b> with 
+                                            
+                                            <a href="/info/{{place}}"><input class="place" type="hidden" type="text" name="place" value='{{place}}' readonly></a>
+                                        </b> 
+                                        <br> 
 
                                         <b>
-                                            <input class="name" type="text" name="friend" value='{{friend}}'  readonly>
+                                            <input class="name" type="hidden" type="text" name="friend" value='{{friend}}'  readonly>
 
                                         </b>
 
@@ -84,24 +106,20 @@
         </div>
 
         <script>
-            $("#submitBtn").hide();			
-            var s = Swiped.init({
-                query: '.eventlist li',
-                list: true,
-                right: 40,
-                onClose(){
-
-                    $("#submitBtn").hide();			
-                },
-                onOpen(){
-                    $("#submitBtn").show();
-                    //$("#submitBtn").css("position","absolute");
-
-                }
-
-            });
-
-
-        </script>
+        $(".btn").hide();           
+        var s = Swiped.init({
+            query: '.eventlist li',
+            list: true,
+            right: 40,
+            onClose(){
+                $($(this.elem.firstElementChild[4])).hide();            
+            },
+            onOpen(){
+                $($(this.elem.firstElementChild[4])).show();
+                //$($(this.elem.firstElementChild[4])).css("position","absolute");
+            }
+        });
+        
+    </script>
     </body>
 </html>
