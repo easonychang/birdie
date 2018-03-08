@@ -101,24 +101,20 @@
         </div>
 
         <script>
-            $("#submitBtn").hide();			
-            var s = Swiped.init({
-                query: '.eventlist li',
-                list: true,
-                right: 40,
-                onClose(){
-
-                    $("#submitBtn").hide();			
-                },
-                onOpen(){
-                    $("#submitBtn").show();
-                    //$("#submitBtn").css("position","absolute");
-
-                }
-
-            });
-
-
-        </script>
+        $(".btn").hide();           
+        var s = Swiped.init({
+            query: '.eventlist li',
+            list: true,
+            right: 40,
+            onClose(){
+                $($(this.elem.firstElementChild[4])).hide();            
+            },
+            onOpen(){
+                $($(this.elem.firstElementChild[4])).show();
+                //$($(this.elem.firstElementChild[4])).css("position","absolute");
+            }
+        });
+        
+    </script>
     </body>
 </html>
