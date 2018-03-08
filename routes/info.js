@@ -12,27 +12,6 @@ exports.infoView = function(req, res){
 };
 
 function displayData(response){
-
-    /*var newRest = {
-        "id": response.jsonBody.id,
-        "name": response.jsonBody.name,
-        "image_url": response.jsonBody.image_url,
-        "is_claimed": response.jsonBody.is_claimed,
-        "is_closed": response.jsonBody.is_closed,
-        "url": response.jsonBody.url,
-        "phone": response.jsonBody.phone,
-        "display_phone": response.jsonBody.display_phone,
-        "review_count": response.jsonBody.review_count,
-        "categories": response.jsonBody.categories,
-        "rating": response.jsonBody.rating,
-        "location": response.jsonBody.location,
-        "coordinates": response.jsonBody.coordinates,
-        "photos": response.jsonBody.photos,
-        "price": response.jsonBody.price,
-        "hours": response.jsonBody.hours,
-        "transactions": response.jsonBody.transactions
-    };*/
-
     var rating_image;
     switch (response.jsonBody.rating) {
     case 0:
@@ -83,7 +62,6 @@ function displayData(response){
         "rating_img" : rating_image,
         "price": response.jsonBody.price,
         "location": address,
-
     };
 
 
