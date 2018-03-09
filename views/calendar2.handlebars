@@ -83,7 +83,7 @@
                                             
                                             <a href="/info/{{place}}"><input class="place" type="hidden" type="text" name="place" value='{{place}}' readonly></a>
                                         </b> 
-                                        <br> 
+                                      
 
                                         <b>
                                             <input class="name" type="hidden" type="text" name="friend" value='{{friend}}'  readonly>
@@ -110,7 +110,7 @@
         var s = Swiped.init({
             query: '.eventlist li',
             list: true,
-            right: 40,
+            right: 15,
             onClose(){
                 $($(this.elem.firstElementChild[4])).hide();            
             },
