@@ -60,6 +60,7 @@ function displayData(response){
         "rating": response.jsonBody.rating,
         "rating_img" : rating_image,
         "price": response.jsonBody.price,
+        "phone": response.jsonBody.display_phone,
         "location": address,
     };
 
