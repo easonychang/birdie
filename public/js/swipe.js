@@ -52,7 +52,7 @@ $("#tinderslide").jTinder({
 			window.location.replace("/friends_B");
 		}*/
 			
-		window.location.replace("/friends_A");
+		window.location.replace("/friends_B");
 			
 		
 		
