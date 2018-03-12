@@ -15,9 +15,6 @@ $(document).ready(function() {
 function initializePage() {
     display();
     initConfirmForm();
-    
-	
-	
 }
 
 function display(){
