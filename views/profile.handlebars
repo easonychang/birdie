@@ -30,12 +30,14 @@
 
         <!-- CSS -->
         <link href ="/css/profile.css" rel="stylesheet">
+        <link href ="/css/dropdown.css" rel="stylesheet">
 
         <!-- JS -->
         <script src='/js/bootstrap.min.js'></script>
         <script src='/js/profile.js'></script>
         
         <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800" rel="stylesheet">
+
         
     </head>
 
@@ -80,60 +82,123 @@
                     <h5>Budget:</h5>
                 </div>
 
+
+                <!--<div class="dropdown">
+                  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </div>
+
+                <script>
+                    function myFunction() {
+                        document.getElementById("myDropdown").classList.toggle("show");
+                    }
+
+                    window.onclick = function(event) {
+                      if (!event.target.matches('.dropbtn')) {
+
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                          var openDropdown = dropdowns[i];
+                          if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                          }
+                        }
+                      }
+                    }
+                </script>
+
                 <div class="info-right">
+                    <form id="profile_form">
+                        <div class="input-group mb-3 favfoo">
+                            <select name="favorite" form="favorite" class="custom-select" id="inputGroupSelect01">
+                                <option value="0" id="favorite" selected>Choose...</option>
+                                <option value="1">American</option>
+                                <option value="2">Chinese</option>
+                                <option value="3">Ethiopian</option>
+                                <option value="4">Filipino</option>
+                                <option value="5">French</option>
+                                <option value="6">German</option>
+                                <option value="7">Indian</option>
+                                <option value="8">Indonesian</option>
+                                <option value="9">Italian</option>
+                                <option value="10">Japanese</option>
+                                <option value="11">Korean</option>
+                                <option value="12">Mediterranean</option>
+                                <option value="13">Mexican</option>
+                                <option value="14">Peruvian</option>
+                                <option value="15">Portuguese</option>
+                                <option value="16">Spanish</option>
+                                <option value="17">Taiwanese</option>
+                                <option value="18">Thai</option>
+                                <option value="19">Vietnamese</option>
+                            </select>
+                        </div>
+                        <input type="submit">
+                    </form>
+                </div> -->
+
+
+
+                <div class="info-right">
+                    <form id="profile_form">
                     <div class="input-group mb-3 favfoo">
-                        <select class="custom-select" id="inputGroupSelect01">
-                            <option value="0" selected>Choose...</option>
-                            <option value="1">American</option>
-                            <option value="2">Chinese</option>
-                            <option value="3">Ethiopian</option>
-                            <option value="4">Filipino</option>
-                            <option value="5">French</option>
-                            <option value="6">German</option>
-                            <option value="7">Indian</option>
-                            <option value="8">Indonesian</option>
-                            <option value="9">Italian</option>
-                            <option value="10">Japanese</option>
-                            <option value="11">Korean</option>
-                            <option value="12">Mediterranean</option>
-                            <option value="13">Mexican</option>
-                            <option value="14">Peruvian</option>
-                            <option value="15">Portuguese</option>
-                            <option value="16">Spanish</option>
-                            <option value="17">Taiwanese</option>
-                            <option value="18">Thai</option>
-                            <option value="19">Vietnamese</option>
+                        <select name="favorite" form="favorite" class="custom-select" id="favorite">
+                            <option value="0">Choose...</option>
+                            <option value="American">American</option>
+                            <option value="Chinese">Chinese</option>
+                            <option value="Ethiopian">Ethiopian</option>
+                            <option value="Filipino">Filipino</option>
+                            <option value="French">French</option>
+                            <option value="German">German</option>
+                            <option value="Indian">Indian</option>
+                            <option value="Indonesian">Indonesian</option>
+                            <option value="Italian">Italian</option>
+                            <option value="Japanese">Japanese</option>
+                            <option value="Korean">Korean</option>
+                            <option value="Mediterranean">Mediterranean</option>
+                            <option value="Mexican">Mexican</option>
+                            <option value="Peruvian">Peruvian</option>
+                            <option value="Portuguese">Portuguese</option>
+                            <option value="Spanish">Spanish</option>
+                            <option value="Taiwanese">Taiwanese</option>
+                            <option value="Thai">Thai</option>
+                            <option value="Vietnamese">Vietnamese</option>
                         </select>
                     </div>
                     <div style="height: 53px">&nbsp;</div>
                     <div class="input-group mb-3 disfood">
-                        <select class="custom-select" id="inputGroupSelect01">
+                        <select class="custom-select" id="disliked">
                             <option value="0" selected>Choose...</option>
-                            <option value="1">American</option>
-                            <option value="2">Chinese</option>
-                            <option value="3">Ethiopian</option>
-                            <option value="4">Filipino</option>
-                            <option value="5">French</option>
-                            <option value="6">German</option>
-                            <option value="7">Indian</option>
-                            <option value="8">Indonesian</option>
-                            <option value="9">Italian</option>
-                            <option value="10">Japanese</option>
-                            <option value="11">Korean</option>
-                            <option value="12">Mediterranean</option>
-                            <option value="13">Mexican</option>
-                            <option value="14">Peruvian</option>
-                            <option value="15">Portuguese</option>
-                            <option value="16">Spanish</option>
-                            <option value="17">Taiwanese</option>
-                            <option value="18">Thai</option>
-                            <option value="19">Vietnamese</option>
+                            <option value="American">American</option>
+                            <option value="Chinese">Chinese</option>
+                            <option value="Ethiopian">Ethiopian</option>
+                            <option value="Filipino">Filipino</option>
+                            <option value="French">French</option>
+                            <option value="German">German</option>
+                            <option value="Indian">Indian</option>
+                            <option value="Indonesian">Indonesian</option>
+                            <option value="Italian">Italian</option>
+                            <option value="Japanese">Japanese</option>
+                            <option value="Korean">Korean</option>
+                            <option value="Mediterranean">Mediterranean</option>
+                            <option value="Mexican">Mexican</option>
+                            <option value="Peruvian">Peruvian</option>
+                            <option value="Portuguese">Portuguese</option>
+                            <option value="Spanish">Spanish</option>
+                            <option value="Taiwanese">Taiwanese</option>
+                            <option value="Thai">Thai</option>
+                            <option value="Vietnamese">Vietnamese</option>
                         </select>
                     </div>
                     <div style="height: 53px">&nbsp;</div>
                     <div class="input-group mb-3 allergy">
-                        <select class="custom-select" id="inputGroupSelect01">
-                            <option value="0" selected>Choose...</option>
+                        <select class="custom-select" id="allergies">
+                            <option value="0" id="allergies" selected>Choose...</option>
                             <option value="1">None</option>
                             <option value="2">Bean sprouts</option>
                             <option value="3">Eggs</option>
@@ -149,16 +214,16 @@
                     </div>
                     <div style="height: 53px">&nbsp;</div>
                     <div class="input-group mb-3 drive">
-                        <select class="custom-select" id="inputGroupSelect01">
-                            <option value="0" selected>Choose...</option>
+                        <select class="custom-select" id="driving">
+                            <option value="0" id="driving" selected>Choose...</option>
                             <option value="1">No</option>
                             <option value="2">Yes</option>
                         </select>
                     </div>
                     <div style="height: 53px">&nbsp;</div>
                     <div class="input-group mb-3 budget">
-                        <select class="custom-select" id="inputGroupSelect01">
-                            <option value="0" selected>Choose...</option>
+                        <select class="custom-select" id="budget">
+                            <option value="0" id="budget" selected>Choose...</option>
                             <option value="1">Up to $10</option>
                             <option value="2">Up to $20</option>
                             <option value="3">Up to $30</option>
@@ -173,17 +238,27 @@
                     </div>
                 </div>
             </div>
+        </form>
         </div>
 
         <br>
         <div class="confirm text-center">
             <a class="btn btn-danger" href="#" role="button" onclick="goBack()">Back</a>
-            <a class="btn btn-success" href="#" role="button">Save</a>
+            <a class="btn btn-success" onclick="save()" role="button">Save</a>
         </div>
         
         <script>
             function goBack() {
             window.history.back();
+            }
+            function save(){
+                console.log(localStorage.favorite);
+                localStorage.favorite = document.getElementById("favorite").options[document.getElementById("favorite").selectedIndex].value;
+                localStorage.disliked = document.getElementById("favorite").options[document.getElementById("disliked").selectedIndex].value;
+                localStorage.allergies = document.getElementById("allergies").options[document.getElementById("allergies").selectedIndex].value;
+                localStorage.driving = document.getElementById("driving").options[document.getElementById("driving").selectedIndex].value;
+                localStorage.budget = document.getElementById("budget").options[document.getElementById("budget").selectedIndex].value;
+                console.log(localStorage.favorite);
             }
         </script>
 
