@@ -190,13 +190,11 @@
             window.history.back();
             }
             function save(){
-                console.log(localStorage.favorite);
                 localStorage.favorite = document.getElementById("favorite").options[document.getElementById("favorite").selectedIndex].value;
                 localStorage.disliked = document.getElementById("favorite").options[document.getElementById("disliked").selectedIndex].value;
                 localStorage.allergies = document.getElementById("allergies").options[document.getElementById("allergies").selectedIndex].value;
                 localStorage.driving = document.getElementById("driving").options[document.getElementById("driving").selectedIndex].value;
                 localStorage.budget = document.getElementById("budget").options[document.getElementById("budget").selectedIndex].value;
-                console.log(localStorage.favorite);
             }
         </script>
 
