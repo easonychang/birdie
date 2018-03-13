@@ -1,3 +1,5 @@
+
+
 #event_box {
 	align-content: center;
 	width: 420px;
@@ -22,8 +24,4 @@ li {
 ul {
 	margin: 0 0 10px;
 	padding: 0;
-}
-
-#submitBTn{
-	display: none;
 }
