@@ -20,6 +20,11 @@ $("#tinderslide").jTinder({
 		total_count += 1;
 
 		console.log(dislike_count);
+
+		if(dislike_count == 5){
+        	alert("There are no more restaurants in your area.\n Try changing the settings in your profile or picking a new cuisine!");
+        }
+       
 		
 		if(item.index()==0){
 				window.location.replace("/home");
