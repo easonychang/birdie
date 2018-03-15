@@ -100,7 +100,7 @@ function friendBClick(e) {
         case "Madisen Penna":
             localStorage.friendPic = "madisen-penna";
             break;
-        case "Uday Govindswamy":
+        case "Uday":
             localStorage.friendPic = "uday-govindswamy";
             break;
         case "Katie Archer":
