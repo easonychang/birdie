@@ -43,7 +43,7 @@
 
         <link rel="stylesheet" href="css/login.css">
 
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 
 
@@ -63,6 +63,9 @@
             }
         </script>
 
+        <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800" rel="stylesheet">
+
+        <!-- Starts here -->
         <body>
 
             <div class="form" id="loginForm">
@@ -73,9 +76,12 @@
                 </ul>
 
                 <div class="tab-content">
-                    
-                    <div id="login">   
-                        <h2>Welcome Back!</h2>
+
+                    <div id="login">
+                        <div align="center">
+                            <img class="logo" src="/images/birdielogo.png">
+                        </div>
+                        <h3>Welcome Back!</h3>
 
                         <form action="/login" method="post">
 
@@ -93,32 +99,38 @@
                                 <input type="password"required autocomplete="off"/>
                             </div>
 
-                            <p class="forgot"><a href="#">Forgot Password?</a></p>
-
-
                             <button class="button button-block" onclick="saveName()">Log In</button>
 
                             <br>
+                            <table width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div align="right">
+                                                <!-- google login -->
+                                                <!-- div class="g-signin2" id="button" data-onsuccess="onSignIn"></div> -->
+                                                <div class="col g-signin2" data-width="63" data-height="19" data-theme="light" data-onsuccess="onSignIn">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div align="left">
+                                                <!-- fb login --> 
+                                                <!--<fb:login-button id="button" scope="public_profile,email" onlogin="checkLoginState();"> </fb:login-button> -->
 
-                            <div align="center">
-                                <!-- google login -->
-                                <!-- div class="g-signin2" id="button" data-onsuccess="onSignIn"></div> -->
-                                <div class="g-signin2" data-width="231" data-height="30" data-longtitle="true" data-theme = "dark" data-onsuccess="onSignIn"></div>
-
-                                <br>
-
-                                <!-- fb login --> 
-                                <!--<fb:login-button id="button" scope="public_profile,email" onlogin="checkLoginState();"> </fb:login-button> -->
-
-                                <div class="fb-login-button" data-max-rows="1" data-size="medium" data-width="231" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false" scope="public_profile,email,user_friends" onlogin="checkLoginState();"></div>
-                            </div>
+                                                <div class="col fb-login-button" data-max-rows="1" data-size="small" data-width="231" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false" scope="public_profile,email,user_friends" onlogin="checkLoginState();"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
                         </form>
 
                     </div>
 
                     <div id="signup">   
-                        <h2>Sign Up for Free</h2>
+                        <h3>Sign Up for Free</h3>
 
                         <form action="/login" method="post">
 
@@ -162,7 +174,7 @@
 
             </div> <!-- /form -->
 
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 
 

@@ -8,30 +8,30 @@ html {
 }
 
 body {
-    background: #c1bdba;
-    font-family: 'Titillium Web', sans-serif;
+    background: #fff;
+    font-family: 'Overpass', sans-serif;
 }
 
 a {
     text-decoration: none;
-    color: #1ab188;
+    color: #4EACF3;
     -webkit-transition: .5s ease;
     transition: .5s ease;
 }
 a:hover {
-    color: #179b77;
+    color: #4EACF3;
 }
 
 .form {
-    background: rgba(19, 35, 47, 0.9);
-    padding: 40px;
-    padding-top: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 30px;
     max-width: 600px;
-    height: 100vh;
-    margin: 0px auto;
-    border-radius: 4px;
+    height: 90%;
+    margin: 20px auto;
+    margin-top: 40px;
+    border-radius: 10px;
     -webkit-box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
-    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+    box-shadow: 0 2px 15px 4px rgba(19, 35, 47, 0.1);
 }
 
 .tab-group {
@@ -48,22 +48,24 @@ a:hover {
     display: block;
     text-decoration: none;
     padding: 10px;
-    background: rgba(160, 179, 176, 0.25);
+    margin: 0px 10px;
+    background: rgba(160, 179, 176, 0.20);
     color: #a0b3b0;
-    font-size: 18px;
+    font-size: 12px;
     float: left;
-    width: 50%;
+    width: 42%;
     text-align: center;
     cursor: pointer;
     -webkit-transition: .5s ease;
     transition: .5s ease;
+    border-radius: 30px;
 }
 .tab-group li a:hover {
-    background: #179b77;
+    background: #4EACF3;
     color: #ffffff;
 }
 .tab-group .active a {
-    background: #1ab188;
+    background: #4EACF3;
     color: #ffffff;
 }
 
@@ -71,55 +73,57 @@ a:hover {
     display: none;
 }
 
-h2 {
+h3 {
     text-align: center;
-    color: #ffffff;
-    font-weight: 300;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 600;
     margin: 0 0 40px;
 }
 
 label {
     position: absolute;
-    -webkit-transform: translateY(6px);
-    transform: translateY(6px);
+    -webkit-transform: translateY(11px);
+    transform: translateY(11px);
     left: 13px;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 0.3);
     -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease;
     -webkit-backface-visibility: hidden;
     pointer-events: none;
-    font-size: 16px;
+    font-size: 12px;
+    border-radius: 50px;
 }
 label .req {
     margin: 2px;
-    color: #1ab188;
+    color: #4EACF3;
 }
 
 label.active {
-    -webkit-transform: translateY(40px);
-    transform: translateY(40px);
+    -webkit-transform: translateY(42px);
+    transform: translateY(42px);
     left: 2px;
-    font-size: 14px;
+    font-size: 12px;
 }
 label.active .req {
     opacity: 0;
 }
 
 label.highlight {
-    color: #ffffff;
+    color: rgba(0, 0, 0, 0.3);
 }
 
 input, textarea {
-    font-size: 18px;
+    font-size: 14px;
     display: block;
     width: 100%;
-    height: 100%;
-    padding: 5px 10px;
+    height: 35px;
+    padding: 5px 12px;
     background: none;
     background-image: none;
-    border: 1px solid #a0b3b0;
-    color: #ffffff;
-    border-radius: 0;
+    border: 0px solid #a0b3b0;
+    color: rgba(0, 0, 0, 0.6);
+    border-radius: 30px;
+    box-shadow: 0 2px 10px 2px rgba(19, 35, 47, 0.09);
     -webkit-transition: border-color .25s ease, -webkit-box-shadow .25s ease;
     transition: border-color .25s ease, -webkit-box-shadow .25s ease;
     transition: border-color .25s ease, box-shadow .25s ease;
@@ -127,7 +131,7 @@ input, textarea {
 }
 input:focus, textarea:focus {
     outline: 0;
-    border-color: #1ab188;
+    border-color: #279AF1;
 }
 
 textarea {
@@ -137,7 +141,7 @@ textarea {
 
 .field-wrap {
     position: relative;
-    margin-bottom: 33px;
+    margin-bottom: 30px;
 }
 
 .top-row:after {
@@ -158,19 +162,20 @@ textarea {
     border: 0;
     outline: none;
     border-radius: 0;
-    padding: 7px 0;
-    font-size: 1rem;
+    padding: 10px 0;
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: .1em;
-    background: #1ab188;
+    background: #4EACF3;
     color: #ffffff;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     -webkit-appearance: none;
+    border-radius: 30px;
 }
 .button:hover, .button:focus {
-    background: #179b77;
+    background: #3484C1;
 }
 
 .button-block {
@@ -178,11 +183,12 @@ textarea {
     width: 100%;
 }
 
-.forgot {
-    margin-top: -20px;
-    text-align: right;
+.fb-login-button {
+    width: 200px;
 }
 
-.fb-login-button {
-    width: 150px;
+.logo {
+    width: 100px;
+    height: auto;
+    text-align: center;
 }
