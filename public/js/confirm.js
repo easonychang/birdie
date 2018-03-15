@@ -2,11 +2,8 @@
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
+    console.log(localStorage.friendPic);
 	initializePage();
-
-    
-
-
 })
 
 /*
@@ -30,6 +27,12 @@ function display(){
     }else {
         $('.userphoto').hide();
     }
+
+    if(localStorage.friendName && localStorage.friendPic){
+        $('#friendicon').hide();
+        $('.friendphoto').attr("src", 'images/friends/' + localStorage.friendPic + '.jpg');
+    }
+
     
     console.log(localStorage.friendName);
 

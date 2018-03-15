@@ -62,6 +62,8 @@ function friendAClick(e) {
 	
     var friendname = $(this).closest(".mb-1").context.querySelector(".mb-1").textContent;
 
+    
+
     console.log(friendname);
 
     localStorage.friendName = friendname;
@@ -78,6 +80,45 @@ function friendBClick(e) {
 	//var friendname = $(this).closest(".friend-name").context.querySelector(".friend-name").textContent;
     var friendname = $(this).closest(".friend-name").context.getElementsByTagName("P")[0].textContent;
     console.log(friendname);
+
+    switch(friendname){
+        case "Addison Yee":
+            localStorage.friendPic = "addison-yee";
+            break;
+        case "Alex Kurland":
+            localStorage.friendPic = "alex-kurland";
+            break;
+        case "Avery Jones":
+            localStorage.friendPic = "avery-jones";
+            break;
+        case "Colin Van Winkle":
+            localStorage.friendPic = "colin-winkle";
+            break;
+        case "Jasmine Simmons":
+            localStorage.friendPic = "jasmine-simmons";
+            break;
+        case "Madisen Penna":
+            localStorage.friendPic = "madisen-penna";
+            break;
+        case "Uday Govindswamy":
+            localStorage.friendPic = "uday-govindswamy";
+            break;
+        case "Katie Archer":
+            localStorage.friendPic = "katie-archer";
+            break;
+        case "Tim Green":
+            localStorage.friendPic = "tim-green";
+            break;
+        case "Sarah Gemperle":
+            localStorage.friendPic = "sarah-gemp";
+            break;
+        case "Matthew Van Schalkwyk":
+            localStorage.friendPic = "matt-van";
+            break;
+        case "Kathryn Greenberg":
+            localStorage.friendPic = "kathryn-greenberg";
+            break;
+    }
 
     localStorage.friendName = friendname;
     

@@ -13,12 +13,12 @@ html, body {
 
 .userphoto1{
     border-radius: 50%;
-    width: 50px;
-    
+    width: 50px; 
 }
 
-.userphoto2{
+.friendphoto{
     border-radius: 50%;
+    width: 50px; 
 }
 
 .list-group h5 {
