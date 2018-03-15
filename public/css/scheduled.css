@@ -1,6 +1,5 @@
 html, body {
     padding-bottom: 30px;
-    margin: 0;
     font-family: 'Overpass', sans-serif;
 }
 
@@ -23,6 +22,9 @@ html, body {
 }
 
 .list-group h5 {
+    margin:0 auto;
+    width: 275px;
+    padding-top: 5px;
     font-size: 18px;
     line-height: 15px;
 }
@@ -112,6 +114,7 @@ p, h1 {
 }
 
 .welcome{
+    padding-top: 40px;
 	margin: 30px;
 }
 
