@@ -34,7 +34,6 @@ function display(){
     
     
     if(localStorage.loggedIn === "loggedIn"){
-        
         $('#icon1').hide();  
         $('.userphoto1').attr("src", localStorage.picurl);
     } else {

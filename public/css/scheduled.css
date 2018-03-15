@@ -17,6 +17,7 @@ html, body {
 }
 
 .friendphoto{
+    height: auto;
     border-radius: 50%;
     width: 50px; 
 }
