@@ -43,11 +43,12 @@ function display(){
     if(localStorage.friendName && localStorage.friendPic){
         $('#friendicon').hide();
         $('.friendphoto').attr("src", 'images/friends/' + localStorage.friendPic + '.jpg');
+        $('.names').html("<h4>"+ user + " &amp; " + localStorage.friendName + "</h4>");
     }
 
     //console.log(localStorage.friendName);
     
-    $('.names').html("<h4>"+ user + " &amp; " + localStorage.friendName + "</h4>");
+    
 
     displayTime();
     
