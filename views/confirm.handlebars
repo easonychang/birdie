@@ -105,45 +105,41 @@
 
 
             <!--Choose friends-->
-            <div class="list-group text-center">
-                <a href="/confirm" class="list-group-item list-group-item-action flex-column align-items-start">
-                    <img src="" class="friendphoto">
-                    <i class="fas fa-user-circle fa-3x" aria-hidden='true' id="friendicon"></i>
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Andy Xia</h5>
-                        <span class="badge badge-pill badge-success" style="background-color: #3bcc40">Now</span>
-                    </div>
-                </a>
-            </div>
-            <br>
+            <div align="center">
+                <div class="list-group text-center">
+                    <a href="/confirm" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <img src="" class="friendphoto">
+                        <i class="fas fa-user-circle fa-3x" aria-hidden='true' id="friendicon"></i>
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Andy Xia</h5>
+                        </div>
+                    </a>
+                </div>
+                <br>
 
-            <div class="list-group text-center">
-                <div class="list-group-item list-group-item-action flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5>Choose an available time</h5>
-                        <br>
-                        <form id = "confirmForm">
-
-                            <div class="input-append date form_datetime" data-date="2018-3-3T15:25:00Z">
-                                <span class="add-on"><i class="icon-remove fas fa-times"></i></span>
-                                <input size="20" type="text" id="confirmTime" value="" readonly>
-                                <span class="add-on"><i class="icon-th fas fa-calendar-alt"></i></span>
-                            </div>
+                <div class="list-group text-center">
+                    <div class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 id="time">Choose an available time</h5>
                             <br>
-                            <div class="confirm text-center">
-                                <a class="btn btn-danger" href="/friends_B" role="button">Change Friend</a>
-                                <input type="submit" class="btn btn-success" value="Yes">
-                            </div>
+                            <form id = "confirmForm">
 
-                        </form>
+                                <div class="input-append date form_datetime" data-date="2018-3-3T15:25:00Z">
+                                    <span class="add-on"><i class="icon-remove fas fa-times"></i></span>
+                                    <input size="20" type="text" id="confirmTime" value="" readonly>
+                                    <span class="add-on"><i class="icon-th fas fa-calendar-alt"></i></span>
+                                </div>
+                                <br>
+                                <div class="confirm text-center">
+                                    <a class="btn btn-danger" href="/friends_B" role="button">Change Friend</a>
+                                    <input type="submit" class="btn btn-success" value="Yes">
+                                </div>
+
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-
-
-
-
-
 
         </div>
 

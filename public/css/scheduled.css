@@ -22,12 +22,20 @@ html, body {
     width: 50px; 
 }
 
+.list-group {
+    width: 90%;
+}
+
 .list-group h5 {
     margin:0 auto;
     width: 275px;
     padding-top: 5px;
     font-size: 18px;
     line-height: 15px;
+}
+
+.mb-1 {
+    padding-bottom: 13px;
 }
 
 #padding {
@@ -131,7 +139,7 @@ p, h1 {
 }
 
 .confirm .btn {
-    width: 35%;
+    width: 38%;
 }
 
 .modal-footer {
